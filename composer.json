@@ -1,0 +1,24 @@
+{
+    "name": "ciro23/basic-php-mvc",
+    "type": "library",
+    "description": "a basic php mvc framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ciro Sorre",
+            "email": "ciro.sorre23@gmail.com"
+        }
+    ],
+
+    "require": {
+        "vlucas/phpdotenv": "^5.1",
+        "nikic/fast-route": "^1.3"
+    },
+
+    "autoload": {
+        "classmap": [
+            "app/core/",
+            "app/controllers/"
+        ]
+    }
+}

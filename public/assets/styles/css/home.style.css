@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+}
+
+html {
+  background-color: #121212;
+}
+
+.vote {
+  float: right;
+  background-color: #333333;
+  border: solid 0.5px #707070;
+  text-align: center;
+  border-radius: 50%;
+}
+
+body {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.filter-box {
+  margin-top: 100px;
+  border-radius: 6px;
+  border: solid 0.5px #333333;
+  display: inline-block;
+}
+
+.filter-box a {
+  color: white;
+  text-decoration: none;
+  border-right: solid 0.5px #333333;
+  padding: 7px 17px;
+  display: inline-block;
+}
+
+.filter-box a:last-of-type {
+  border: none;
+}
+
+.total-results {
+  margin-top: 100px;
+  color: white;
+}
+
+.movie-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 40px 0 30px 0;
+}
+
+.movie-grid a {
+  color: white;
+  text-decoration: none;
+}
+
+.movie {
+  width: 200px;
+  border-radius: 4px;
+  padding-bottom: 20px;
+  background-color: black;
+  position: relative;
+}
+
+.movie img {
+  border-radius: 4px 4px 0 0;
+  width: 200px;
+}
+
+.title {
+  font-size: 16.5px;
+  margin: 10px 0 0 15px;
+  display: inline-block;
+  width: 65%;
+}
+
+.vote {
+  width: 23px;
+  margin: 3px 10px 0 0;
+  padding: 5px;
+}
+
+.filter {
+  text-align: center;
+}
+
+.page-filter {
+  margin: 0 auto;
+  margin-bottom: 300px;
+}
+
+.current-page {
+  background-color: #363636;
+  cursor: default;
+}

@@ -1,0 +1,6 @@
+# makes directories not accessible
+Options -Indexes
+
+# removes "public" from the url
+RewriteEngine On
+RewriteRule ^(.*)$ public/$1 [L]
