@@ -27,7 +27,7 @@ html {
 .movie {
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 140px;
+  margin-top: 100px;
 }
 
 .movie-details {
@@ -63,9 +63,34 @@ html {
 }
 
 .overview {
-  margin: 20px 0;
-  font-size: 17.5px;
+  margin: 12px 0 20px;
+  font-size: 17px;
   width: 90%;
+}
+
+.add-to-watchlist {
+  margin-top: 12px;
+  padding: 5px 10px;
+  background-color: #1dbf48;
+  border-radius: 4px;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.add-to-watchlist:hover {
+  background-color: #189e3b;
+}
+
+.add-to-watchlist img {
+  width: 25px;
+  margin-right: 5px;
 }
 
 .genres {
@@ -82,7 +107,7 @@ html {
 .director {
   font-style: italic;
   color: #e8e8e8;
-  margin: 20px 0;
+  margin: 20px 0 10px;
 }
 
 .genres p:not(:first-of-type) {

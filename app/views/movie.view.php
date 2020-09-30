@@ -60,6 +60,11 @@
                     <?php
                     echo "<h1>" . $data['title'] . "</h1>";
                     echo "<span class='vote'>" . $data['vote_average'] . "</span>";
+
+                    echo "<span class='add-to-watchlist'>";
+                    echo "<img src='/public/assets/icons/bookmark_empty.icon.png'>" . $lang['add_to_watchlist'];
+                    echo "</span>";
+
                     echo "<p class='overview'>" . $data['overview'] . "</p>";
                     echo "<p class='director'>" . $lang['director'] . ": " . $data['crew']['director'] . "</p>";
 

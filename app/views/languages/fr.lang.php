@@ -14,6 +14,7 @@ $lang['total_results']['there_are'] = "Il y a ";
 $lang['total_results']['results_for'] = " résultats pour ";
 
 // movie page
+$lang['add_to_watchlist'] = "Ajouter à la liste de surveillance";
 $lang['director'] = "Réalisateur";
 $lang['genres'] = "Genres";
 $lang['release_date'] = "Date de sortie";
