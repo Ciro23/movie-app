@@ -20,9 +20,9 @@ class MovieModel extends Model {
         $budget = strval($budget);
         $budgetNew = "";
 
-        for ($i = 0; $i <= strlen($budget); $i++) {
+        for ($i = 1; $i <= strlen($budget); $i++) {
             $budgetNew .= $budget[strlen($budget) - $i];
-            if ($i % 3 == 0 && $i != 0) {
+            if ($i % 3 == 0 && $i != strlen($budget)) {
                 $budgetNew .= ".";
             }
         }
