@@ -2,18 +2,22 @@
   margin: 0;
   padding: 0;
   font-family: "Jost", sans-serif;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 html {
   background-color: #121212;
+  font-size: 10px;
 }
 
 .vote {
   float: right;
   background-color: #333333;
-  border: solid 0.5px #707070;
+  border: solid 0.05rem #707070;
   text-align: center;
   border-radius: 50%;
+  font-size: 1.4rem;
 }
 
 .nav-bar {
@@ -23,11 +27,11 @@ html {
   left: 0;
   background-color: #121212;
   width: 100%;
-  height: 70px;
+  height: 7rem;
 }
 
 .nav-bar > div {
-  max-width: 1120px;
+  max-width: 112rem;
   height: 100%;
   margin: 0 auto;
   display: -webkit-box;
@@ -40,7 +44,7 @@ html {
 }
 
 .nav-bar a {
-  height: 30px;
+  height: 3rem;
 }
 
 .nav-bar img {
@@ -48,24 +52,28 @@ html {
 }
 
 .nav-bar input {
-  width: 380px;
-  height: 33px;
-  padding: 0 10px;
-  border-radius: 6px;
-  font-size: 16px;
+  width: 38rem;
+  height: 3.3rem;
+  padding: 0 1rem;
+  border-radius: 0.6rem;
+  font-size: 1.5rem;
   border: none;
   outline: none;
-  margin-left: 20px;
+  margin-left: 2rem;
 }
 
 .nav-bar .languages {
   position: absolute;
   right: 0;
-  padding: 3px 10px;
-  border-radius: 4px;
+  padding: 0.3rem 1.5rem;
+  border-radius: 0.4rem;
   background-color: #121212;
   color: white;
+  font-size: 1.3rem;
   outline: none;
-  border: solid 0.5px #333333;
+  border: solid 0.05rem #333333;
   cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }

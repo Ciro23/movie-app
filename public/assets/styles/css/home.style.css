@@ -2,37 +2,42 @@
   margin: 0;
   padding: 0;
   font-family: "Jost", sans-serif;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 html {
   background-color: #121212;
+  font-size: 10px;
 }
 
 .vote {
   float: right;
   background-color: #333333;
-  border: solid 0.5px #707070;
+  border: solid 0.05rem #707070;
   text-align: center;
   border-radius: 50%;
+  font-size: 1.4rem;
 }
 
 body {
-  max-width: 1120px;
+  max-width: 112rem;
   margin: 0 auto;
 }
 
 .filter-box {
-  margin-top: 100px;
-  border-radius: 6px;
-  border: solid 0.5px #333333;
+  margin-top: 10rem;
+  border-radius: 0.6rem;
+  border: solid 0.05rem #333333;
   display: inline-block;
 }
 
 .filter-box a {
   color: white;
   text-decoration: none;
-  border-right: solid 0.5px #333333;
-  padding: 7px 17px;
+  font-size: 1.5rem;
+  border-right: solid 0.05rem #333333;
+  padding: 0.7rem 1.7rem;
   display: inline-block;
 }
 
@@ -41,7 +46,7 @@ body {
 }
 
 .total-results {
-  margin-top: 100px;
+  margin-top: 10rem;
   color: white;
 }
 
@@ -51,11 +56,11 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 40px 0 30px 0;
+  margin: 4rem 0 3rem 0;
 }
 
 .movie-grid a {
@@ -64,29 +69,29 @@ body {
 }
 
 .movie {
-  width: 200px;
-  border-radius: 4px;
-  padding-bottom: 20px;
+  width: 20rem;
+  border-radius: 0.4rem;
+  padding-bottom: 2rem;
   background-color: black;
   position: relative;
 }
 
 .movie img {
-  border-radius: 4px 4px 0 0;
-  width: 200px;
+  border-radius: 0.4rem 0.4rem 0 0;
+  width: 20rem;
 }
 
 .title {
-  font-size: 16.5px;
-  margin: 10px 0 0 15px;
+  font-size: 1.65rem;
+  margin: 1rem 0 0 1.5rem;
   display: inline-block;
   width: 65%;
 }
 
 .vote {
-  width: 23px;
-  margin: 3px 10px 0 0;
-  padding: 5px;
+  width: 2.3rem;
+  margin: 0.3rem 1rem 0 0;
+  padding: 0.5rem;
 }
 
 .filter {
@@ -95,7 +100,7 @@ body {
 
 .page-filter {
   margin: 0 auto;
-  margin-bottom: 300px;
+  margin-bottom: 30rem;
 }
 
 .current-page {

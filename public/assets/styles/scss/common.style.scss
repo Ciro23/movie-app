@@ -6,16 +6,19 @@ $grey: #333333;
     margin: 0;
     padding: 0;
     font-family: "Jost", sans-serif;
+    box-sizing: content-box;
 }
 
 html {
     background-color: $background;
+    font-size: 10px;
 }
 
 .vote {
     float: right;
     background-color: $grey;
-    border: solid 0.5px #707070;
+    border: solid 0.05rem #707070;
     text-align: center;
     border-radius: 50%;
+    font-size: 1.4rem;
 }
