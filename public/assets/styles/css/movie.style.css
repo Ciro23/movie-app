@@ -86,7 +86,8 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* transition: 0.1s ease-in-out; */
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 
 .add-to-watchlist:hover {
@@ -107,6 +108,7 @@ html {
   grid-row-gap: 1rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 .director {

@@ -60,7 +60,7 @@ html {
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    /* transition: 0.1s ease-in-out; */
+    transition: 0.1s ease-in-out;
 }
 
 .add-to-watchlist:hover {
@@ -78,6 +78,7 @@ html {
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 .director {
