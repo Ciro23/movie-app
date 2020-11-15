@@ -2,8 +2,8 @@
   margin: 0;
   padding: 0;
   font-family: "Jost", sans-serif;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -17,7 +17,6 @@ html {
   border: solid 0.05rem #707070;
   text-align: center;
   border-radius: 50%;
-  font-size: 1.4rem;
 }
 
 html {
@@ -63,8 +62,8 @@ html {
 }
 
 .vote {
-  width: 2.5rem;
-  padding: 1rem;
+  padding: 0.8rem;
+  font-size: 1.5rem;
 }
 
 .overview {

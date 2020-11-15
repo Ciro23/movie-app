@@ -2,8 +2,8 @@
   margin: 0;
   padding: 0;
   font-family: "Jost", sans-serif;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -17,11 +17,10 @@ html {
   border: solid 0.05rem #707070;
   text-align: center;
   border-radius: 50%;
-  font-size: 1.4rem;
 }
 
 .movies-container {
-  max-width: 112rem;
+  max-width: 113rem;
   margin: 0 auto;
   padding: 0.5rem;
 }
@@ -90,9 +89,9 @@ html {
 }
 
 .vote {
-  width: 2.3rem;
   margin: 0.3rem 1rem 0 0;
-  padding: 0.5rem;
+  padding: 0.6rem;
+  font-size: 1.4rem;
 }
 
 .filter {
