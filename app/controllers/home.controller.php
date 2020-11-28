@@ -7,7 +7,14 @@ class HomeController extends Controller {
         $model = $this->model("movie");
         $data = $model->getList($filter, $page);
         
-        $this->view("home", $data);
+        if ($data == NULL) {
+            // renders the pagenotfound view
+            $pagenotfound = new PageNotFoundController;
+            $pagenotfound->index();
+        } else {
+            // renders the movie view
+            $this->view("home", $data);
+        }
     }
 
     public function search($query, $page) {
@@ -15,6 +22,13 @@ class HomeController extends Controller {
         $model = $this->model("movie");
         $data = $model->search($query, $page);
 
-        $this->view("home", $data);
+        if ($data == NULL) {
+            // renders the pagenotfound view
+            $pagenotfound = new PageNotFoundController;
+            $pagenotfound->index();
+        } else {
+            // renders the movie view
+            $this->view("home", $data);
+        }
     }
 }
