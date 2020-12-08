@@ -29,11 +29,12 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     // movie page route
     $r->addRoute("GET", "/movie/{id:\d+}", "MovieController/index");
 
-    // signup and login routes
+    // signup, login and logout routes
     $r->addRoute("GET", "/{type:signup}[/[?{error}]]", "SignupController/index");
-    $r->addRoute("POST", "/{type:signup}/action[/]", "SignupController/signupAction");
+    $r->addRoute("POST", "/{type:signup}/action[/]", "SignupController/signup");
     $r->addRoute("GET", "/{type:login}[/[?{error}]]", "LoginController/index");
-    $r->addRoute("POST", "/{type:login}/action[/]", "LoginController/loginAction");
+    $r->addRoute("POST", "/{type:login}/action[/]", "LoginController/login");
+    $r->addRoute("GET", "/logout[/]", "LoginController/logout");
 
     // user routes
     $r->addRoute("GET", "/{type:user}[/{user}[/]]", "UserController/index");

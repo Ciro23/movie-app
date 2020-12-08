@@ -6,6 +6,6 @@
         <title>Document</title>
     </head>
     <body>
-        <?php echo $_SESSION['username'] ?>
+        
     </body>
 </html>

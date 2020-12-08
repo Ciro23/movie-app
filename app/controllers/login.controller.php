@@ -10,7 +10,7 @@ class LoginController extends Controller {
         }
     }
 
-    public function loginAction() {
+    public function login() {
         $loginModel = $this->model("login");
 
         if ($loginModel->login($this->model("user"))) {
@@ -34,6 +34,16 @@ class LoginController extends Controller {
                     header("Location: /signup/?" . $urlQuery);
                     break;
             }
+        }
+    }
+
+    public function logout() {
+        if (isset($_SESSION['username'])) {
+            $loginModel = $this->model("login");
+            $loginModel->logout();
+            header("Location: /");
+        } else {
+            $this->view("pagenotfound");
         }
     }
 }

@@ -10,7 +10,7 @@ class SignupController extends Controller {
         }
     }
 
-    public function signupAction() {
+    public function signup() {
         $signupModel = $this->model("signup");
 
         if ($signupModel->signup($this->model("user"))) {

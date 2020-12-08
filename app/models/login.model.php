@@ -39,6 +39,10 @@ class LoginModel extends Model {
         $_SESSION['username'] = $username;
     }
 
+    public function logout() {
+        session_destroy();
+    }
+
     private function usernameValidate($username) {
         if (empty($username)) {
             return "username-empty";
