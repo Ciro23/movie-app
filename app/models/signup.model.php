@@ -12,19 +12,15 @@ class SignupModel extends Model {
 
         $return = false;
 
-        // validates password
-        if ($error = $this->validatePassword($password, $repassword)) {
+        // validates username, checks if the username is already taken and validates password
+        if ($error = $this->validateUsername($username)) {
             $return = true;
-        }
 
-        // checks if the username is already taken
-        if ($error = $userModel->doesUserExists($username)) {
+        } else if ($userModel->doesUserExists($username)) {
             $error = "username-already-taken";
             $return = true;
-        }
 
-        // validates username
-        if ($error = $this->validateUsername($username)) {
+        } else if ($error = $this->validatePassword($password, $repassword)) {
             $return = true;
         }
 

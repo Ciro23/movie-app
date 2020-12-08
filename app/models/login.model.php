@@ -12,19 +12,15 @@ class LoginModel extends Model {
 
         $return = false;
 
-        // checks if the user exists
-        if (!$userModel->doesUserExists($username) && $password != $userModel->getUserPassword($username)) {
-            $error = "user-does-not-exists";
-            $return = true;
-        }
-
-        // validates password
-        if ($error = $this->passwordValidate($password)) {
-            $return = true;
-        }
-
-        // validates username
+        // validates username, checks if the user exists and validates password
         if ($error = $this->usernameValidate($username)) {
+            $return = true;
+
+        } else if ($error = $this->passwordValidate($password)) {
+            $return = true;
+
+        } else if (!$userModel->doesUserExists($username) || !password_verify($password, $userModel->getUserPassword($username))) {
+            $error = "user-does-not-exists";
             $return = true;
         }
 
@@ -37,6 +33,8 @@ class LoginModel extends Model {
 
         // creates the session
         $_SESSION['username'] = $username;
+
+        return true;
     }
 
     public function logout() {

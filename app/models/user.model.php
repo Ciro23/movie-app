@@ -10,7 +10,7 @@ class UserModel extends Model {
     }
 
     public function doesUserExists($username) {
-        $sql = "SELECT COUNT(*) FROM users WHERE username = ?";
+        $sql = "SELECT COUNT(*) FROM user WHERE username = ?";
         $query = $this->executeStmt($sql, [$username]);
         if ($query->fetch(PDO::FETCH_COLUMN) == 1) {
             return true;
