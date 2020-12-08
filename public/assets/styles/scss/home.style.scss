@@ -1,5 +1,9 @@
 @import "common.style.scss";
 
+html {
+    background: linear-gradient($background, #1f1f1f);
+}
+
 .movies-container {
     max-width: 113rem;
     margin: 0 auto;
@@ -67,7 +71,8 @@
 
 .vote {
     margin: 0.3rem 1rem 0 0;
-    padding: 0.6rem;
+    width: 3.2rem;
+    height: 3.2rem;
     font-size: 1.4rem;
 }
 

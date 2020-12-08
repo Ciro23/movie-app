@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="<?= $_COOKIE['language']?>" dir="ltr">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
         <?php
         include __DIR__ . "/../included/common.included.php";
         
-        $imgPath = imageExists($data['backdrop_path'], "original", "");
+        $imgPath = MovieModel::doesMovieImageExists($data['backdrop_path'], "original", "");
         ?>
         
         <style>
@@ -17,7 +17,7 @@
             }
         </style>
 
-        <link rel="stylesheet" href="/assets/styles/css/movie.style.css" type="text/css">
+        <link rel="stylesheet" href="/assets/styles/css/movie.style.css">
 
         <title><?= $data['title'] ?> - Movie App</title>
 
@@ -52,7 +52,7 @@
             <div class="movie-details">
 
                 <?php
-                $imgPath = imageExists($data['poster_path'], "w300");
+                $imgPath = MovieModel::doesMovieImageExists($data['poster_path'], "w300");
                 ?>
 
                 <img src="<?= $imgPath ?>">

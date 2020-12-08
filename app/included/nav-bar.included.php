@@ -4,25 +4,28 @@
             <img src="/assets/icons/logo.icon.png">
         </a>
         <input class="search-bar" type="text" placeholder="<?= $lang['search-bar'] ?>">
-        <select class="languages">
+        <span>
             <?php
-            $languages = ["English" => "us",
-                          "Italiano" => "it",
-                          "Français" => "fr",
-                          "Español" => "es",
-                          "Deutsch" => "de"];
-
-            foreach ($languages as $key => $value) {
-                if ($value == $_COOKIE['language']) {
-                    $selected = "selected";
-                } else {
-                    $selected = "";
-                }
-
-                echo "<option value='$value' $selected>" . $key . "</option>";
+            if (isset($_SESSION['username'])) {
+                echo "<a href='/user/". $_SESSION['username'] . "'>" . $_SESSION['username'] . "</a>";
+            } else {
+                echo "<a href='/login'>Login</a>";
             }
             ?>
-        </select>
+            <select class="languages">
+                <?php
+                foreach ($languages as $key => $value) {
+                    if ($value == $_COOKIE['language']) {
+                        $selected = "selected";
+                    } else {
+                        $selected = "";
+                    }
+
+                    echo "<option value='$value' $selected>" . $key . "</option>";
+                }
+                ?>
+            </select>
+        </span>
     </div>
 </div>
 

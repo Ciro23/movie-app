@@ -1,12 +1,11 @@
 {
-    "name": "ciro23/basic-php-mvc",
-    "type": "library",
-    "description": "a basic php mvc framework",
+    "name": "ciro23/movie-app",
+    "type": "app",
+    "description": "movie app",
     "license": "MIT",
     "authors": [
         {
-            "name": "Ciro Sorre",
-            "email": "ciro.sorre23@gmail.com"
+            "name": "Ciro Sorre"
         }
     ],
 

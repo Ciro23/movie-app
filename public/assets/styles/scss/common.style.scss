@@ -10,11 +10,13 @@ $grey: #333333;
 }
 
 html {
-    background-color: $background;
     font-size: 10px;
 }
 
 .vote {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     float: right;
     background-color: $grey;
     border: solid 0.05rem #707070;

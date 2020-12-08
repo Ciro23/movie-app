@@ -2,12 +2,10 @@
 
 class Model extends Dbh {
     
-    protected function executeStmt($sql, $inParameters, $fetch = false) {
+    protected function executeStmt($sql, $inParameters = []) {
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute($inParameters);
 
-        if ($fetch) {
-            return $stmt->fetchAll();
-        }
+        return $stmt;
     }
 }

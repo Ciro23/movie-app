@@ -22,3 +22,6 @@ $lang['runtime'] = "Laufzeit";
 $lang['budget'] = "Budget";
 $lang['actors'] = "Schauspieler";
 $lang['show_all'] = "Zeige alles";
+
+// page not found
+$lang['page_not_found'] = "Page not found";

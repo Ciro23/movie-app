@@ -20,7 +20,7 @@
     position: relative;
 }
 
-.nav-bar a {
+.nav-bar > div > a {
     height: 3rem;
 }
 
@@ -39,10 +39,21 @@
     margin-left: 2rem;
 }
 
-.nav-bar .languages {
+.nav-bar span {
     position: absolute;
-    right: 0;
-    padding: 0.3rem 1.5rem;
+    right: 0.5rem;
+}
+
+.nav-bar span a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 0.3rem 0.5rem;
+}
+
+.nav-bar span .languages {
+    margin-left: 2rem;
+    padding: 0.3rem 0.5rem;
     border-radius: 0.4rem;
     background-color: $background;
     color: white;

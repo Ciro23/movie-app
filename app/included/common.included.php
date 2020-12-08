@@ -6,11 +6,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 <!-- common style files -->
-<link rel="stylesheet" href="/public/assets/styles/css/common.style.css" type="text/css">
-<link rel="stylesheet" href="/public/assets/styles/css/nav-bar.style.css" type="text/css">
-<link rel="stylesheet" href="/public/assets/styles/css/footer.style.css" type="text/css">
+<link rel="stylesheet" href="/public/assets/styles/css/common.style.css">
+<link rel="stylesheet" href="/public/assets/styles/css/nav-bar.style.css">
+<link rel="stylesheet" href="/public/assets/styles/css/footer.style.css">
 
 <?php
-include_once __DIR__ . "/php-functions.included.php";
+$languages = ["En" => "us",
+              "It" => "it",
+              "Fr" => "fr",
+              "Es" => "es",
+              "De" => "de"];
 include_once __DIR__ . "/../views/languages/" . $_COOKIE['language'] . ".lang.php";
 ?>

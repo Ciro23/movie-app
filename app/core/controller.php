@@ -8,6 +8,13 @@ class Controller {
     }
 
     protected function view($view, $data = []) {
-        require_once __DIR__ . "/../views/" . $view . ".view.php";
+        if ($data === null) {
+            // renders the pagenotfound view
+            $pagenotfound = new PageNotFoundController;
+            $pagenotfound->index();
+        } else {
+            // renders the wanted view
+            require_once __DIR__ . "/../views/" . $view . ".view.php";
+        }
     }
 }

@@ -70,6 +70,7 @@ class ComposerStaticInit494faa6b505eedf2ddf5e7fb0a3cb0ef
     );
 
     public static $classMap = array (
+        'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Controller' => __DIR__ . '/../..' . '/app/core/controller.php',
         'Dbh' => __DIR__ . '/../..' . '/app/core/dbh.php',
         'Dotenv\\Dotenv' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Dotenv.php',
@@ -134,6 +135,7 @@ class ComposerStaticInit494faa6b505eedf2ddf5e7fb0a3cb0ef
         'GrahamCampbell\\ResultType\\Result' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Result.php',
         'GrahamCampbell\\ResultType\\Success' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Success.php',
         'HomeController' => __DIR__ . '/../..' . '/app/controllers/home.controller.php',
+        'LoginController' => __DIR__ . '/../..' . '/app/controllers/login.controller.php',
         'Model' => __DIR__ . '/../..' . '/app/core/model.php',
         'MovieController' => __DIR__ . '/../..' . '/app/controllers/movie.controller.php',
         'PageNotFoundController' => __DIR__ . '/../..' . '/app/controllers/pagenotfound.controller.php',
@@ -141,12 +143,13 @@ class ComposerStaticInit494faa6b505eedf2ddf5e7fb0a3cb0ef
         'PhpOption\\None' => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption/None.php',
         'PhpOption\\Option' => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption/Option.php',
         'PhpOption\\Some' => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption/Some.php',
-        'Router' => __DIR__ . '/../..' . '/app/core/router.php',
+        'SignupController' => __DIR__ . '/../..' . '/app/controllers/signup.controller.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Polyfill\\Ctype\\Ctype' => __DIR__ . '/..' . '/symfony/polyfill-ctype/Ctype.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
         'Symfony\\Polyfill\\Php80\\Php80' => __DIR__ . '/..' . '/symfony/polyfill-php80/Php80.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
+        'UserController' => __DIR__ . '/../..' . '/app/controllers/user.controller.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
     );
 

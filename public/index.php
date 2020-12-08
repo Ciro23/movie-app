@@ -12,31 +12,38 @@ if (!isset($_COOKIE['language'])) {
     $_COOKIE['language'] = "us";
 }
 
+session_start();
+
 // creates custom routes
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
 
     // homepage routes
-    $r->addRoute("GET", "/", "HomeController/popular");
-    $r->addRoute("GET", "/{sort:popular}", "HomeController/popular");
-    $r->addRoute("GET", "/{sort:now_playing}", "HomeController/now_playing");
-    $r->addRoute("GET", "/{sort:top_rated}", "HomeController/top_rated");
-    $r->addRoute("GET", "/{sort:upcoming}", "HomeController/upcoming");
-    $r->addRoute("GET", "/{sort:popular}/[{page:\d+}]", "HomeController/popular");
-    $r->addRoute("GET", "/{sort:now_playing}/[{page:\d+}]", "HomeController/now_playing");
-    $r->addRoute("GET", "/{sort:top_rated}/[{page:\d+}]", "HomeController/top_rated");
-    $r->addRoute("GET", "/{sort:upcoming}/[{page:\d+}]", "HomeController/upcoming");
+    $r->addRoute("GET", "/[{sort:popular}[/[{page:\d+}[/]]]]", "HomeController/index");
+    $r->addRoute("GET", "/{sort:now_playing}[/[{page:\d+}[/]]]", "HomeController/index");
+    $r->addRoute("GET", "/{sort:top_rated}[/[{page:\d+}[/]]]", "HomeController/index");
+    $r->addRoute("GET", "/{sort:upcoming}[/[{page:\d+}[/]]]", "HomeController/index");
 
     // search route
-    $r->addRoute("GET", "/search/{query}[/{page:\d+}]", "HomeController/search");
+    $r->addRoute("GET", "/search/{query}[/[{page:\d+}[/]]]", "HomeController/searchMovie");
 
     // movie page route
-    $r->addRoute("GET", "/movie/{id:\d+}", "MovieController/movie");
+    $r->addRoute("GET", "/movie/{id:\d+}", "MovieController/index");
+
+    // signup and login routes
+    $r->addRoute("GET", "/{type:signup}[/[?{error}]]", "SignupController/index");
+    $r->addRoute("POST", "/{type:signup}/action[/]", "SignupController/signupAction");
+    $r->addRoute("GET", "/{type:login}[/[?{error}]]", "LoginController/index");
+    $r->addRoute("POST", "/{type:login}/action[/]", "LoginController/loginAction");
+
+    // user routes
+    $r->addRoute("GET", "/{type:user}[/{user}[/]]", "UserController/index");
 });
 
 $httpMethod = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['REQUEST_URI'];
 
 $routeInfo = $dispatcher->dispatch($httpMethod, $uri);
+
 switch ($routeInfo[0]) {
     case FastRoute\Dispatcher::NOT_FOUND:
         echo "page not found";
@@ -47,13 +54,16 @@ switch ($routeInfo[0]) {
         echo "forbidden";
         break;
 
-    case FastRoute\Dispatcher::FOUND:        
+    case FastRoute\Dispatcher::FOUND:
         $handler = $routeInfo[1];
         $vars = $routeInfo[2];
         
-        // makes the filter popular if no one is selected
-        if (!isset($vars['filter'])) {
-            $vars['filter'] = "popular";
+        // gets the controller and the method
+        list($controller, $method) = explode("/", $handler);
+        
+        // makes the sort popular if no one is selected
+        if (!isset($vars['sort'])) {
+            $vars['sort'] = "popular";
         }
 
         // makes the page 1 as the default if no one is selected
@@ -61,16 +71,7 @@ switch ($routeInfo[0]) {
             $vars['page'] = "1";
         }
         
-        // gets the controller name
-        $handlers = explode("/", $handler);
-        $controller = new $handlers[0];
-        
-        if ($handlers[1] == "search") {
-            $method = "search";
-        } else {
-            $method = "index";
-        }
-
+        $controller = new $controller();
         call_user_func_array([$controller, $method], $vars);
         break;
 }

@@ -2,6 +2,102 @@
 
 class MovieModel extends Model {
 
+    public static function doesMovieImageExists($image, $width, $replace = "none") {
+        if ($replace == "none") {
+            $replace = $_ENV['defaultImgPath'];
+        }
+    
+        if ($image == null) {
+            return $replace;
+        } else {
+            return $_ENV['imageBaseUrl'] . $width . $image;
+        }
+    }
+
+    // return a specific movie details
+    public function getMovieDetails($id) {
+        // get the json file into a string variable
+        $tmdbUrl = "https://api.themoviedb.org/3/movie/"
+        . $id
+        . "?api_key="
+        . $_ENV['apiKey']
+        . "&language="
+        . $_COOKIE['language'];
+
+        $json = @file_get_contents($tmdbUrl);
+
+        if ($data = json_decode($json, true)) {
+            // formats the date, the budget and the runtime
+            $data['release_date'] = $this->formatDate($data['release_date']);
+            $data['budget'] = $this->formatBudget($data['budget']);
+            $data['runtime'] = $this->formatRuntime($data['runtime']);
+
+            // adds the cast to the data array
+            $data = array_merge($data, $this->getCredits($id));
+            // saves the director name
+            $data['crew']['director'] = $this->getDirector($data['crew']);
+        }
+        
+        return $data;
+    }
+
+    // return a list of movies sorted differently
+    public function getMovieList($filter, $page) {
+        // get the json file into a string variable
+        $tmdbUrl = "https://api.themoviedb.org/3/movie/"
+        . $filter
+        . "?api_key="
+        . $_ENV['apiKey']
+        . "&language="
+        . $_COOKIE['language']
+        . "&page="
+        . $page
+        . "&region="
+        . $_COOKIE['language'];
+
+        $json = @file_get_contents($tmdbUrl);
+        
+        if ($data = json_decode($json, true)) {
+            // saves the current movie filter
+            $data['movie_filter'] = $filter;
+
+            // gets the minimum and the maximum page
+            $data['minPage'] = $this->getMinPage($data['page']);
+            $data['maxPage'] = $this->getMaxPage($data['page'], $data['total_pages']);
+        }
+
+        return $data;
+    }
+
+    // return a list of movie by searched title
+    public function searchMovie($query, $page) {
+        $tmdbUrl = "https://api.themoviedb.org/3/search/movie?api_key="
+        . $_ENV['apiKey']
+        . "&language="
+        . $_COOKIE['language']
+        . "&query="
+        . $query
+        . "&page="
+        . $page
+        . "&region="
+        . $_COOKIE['language'];
+        
+        $json = @file_get_contents($tmdbUrl);
+        
+        if ($data = json_decode($json, true)) {
+            // formats and saves the current query
+            $query = str_replace("%20", " ", $query);
+            $query = urldecode($query);
+            $data['query'] = $query;
+
+            // gets the minimum and the maximum page
+            $data['minPage'] = $this->getMinPage($data['page']);
+            $data['maxPage'] = $this->getMaxPage($data['page'], $data['total_pages']);
+        }
+
+        return $data;
+    }
+
     private function formatDate($date) {
         $date = date_create($date);
         $date = date_format($date, "d/m/Y");
@@ -67,88 +163,5 @@ class MovieModel extends Model {
                 return $crew[$i]['name'];
             }
         }
-    }
-
-    // return a specific movie details
-    public function getMovieDetails($id) {
-        // get the json file into a string variable
-        $tmdbUrl = "https://api.themoviedb.org/3/movie/"
-        . $id
-        . "?api_key="
-        . $_ENV['apiKey']
-        . "&language="
-        . $_COOKIE['language'];
-
-        $json = @file_get_contents($tmdbUrl);
-
-        if ($data = json_decode($json, true)) {
-            // formats the date, the budget and the runtime
-            $data['release_date'] = $this->formatDate($data['release_date']);
-            $data['budget'] = $this->formatBudget($data['budget']);
-            $data['runtime'] = $this->formatRuntime($data['runtime']);
-
-            // adds the cast to the data array
-            $data = array_merge($data, $this->getCredits($id));
-            // saves the director name
-            $data['crew']['director'] = $this->getDirector($data['crew']);
-        }
-        
-        return $data;
-    }
-
-    // return a list of movies sorted differently
-    public function getList($filter, $page) {
-        // get the json file into a string variable
-        $tmdbUrl = "https://api.themoviedb.org/3/movie/"
-        . $filter
-        . "?api_key="
-        . $_ENV['apiKey']
-        . "&language="
-        . $_COOKIE['language']
-        . "&page="
-        . $page
-        . "&region="
-        . $_COOKIE['language'];
-
-        $json = @file_get_contents($tmdbUrl);
-        
-        if ($data = json_decode($json, true)) {
-            // saves the current movie filter
-            $data['movie_filter'] = $filter;
-
-            // gets the minimum and the maximum page
-            $data['minPage'] = $this->getMinPage($data['page']);
-            $data['maxPage'] = $this->getMaxPage($data['page'], $data['total_pages']);
-        }
-
-        return $data;
-    }
-
-    // return a list of movie by searched title
-    public function search($query, $page) {
-        $tmdbUrl = "https://api.themoviedb.org/3/search/movie?api_key="
-        . $_ENV['apiKey']
-        . "&language="
-        . $_COOKIE['language']
-        . "&query="
-        . $query
-        . "&page="
-        . $page
-        . "&region="
-        . $_COOKIE['language'];
-        
-        $json = @file_get_contents($tmdbUrl);
-        
-        if ($data = json_decode($json, true)) {
-            // saves the current query
-            $query = str_replace("%20", " ", $query);
-            $data['query'] = $query;
-
-            // gets the minimum and the maximum page
-            $data['minPage'] = $this->getMinPage($data['page']);
-            $data['maxPage'] = $this->getMaxPage($data['page'], $data['total_pages']);
-        }
-
-        return $data;
     }
 }

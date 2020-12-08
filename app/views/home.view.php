@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="<?= $_COOKIE['language']?>" dir="ltr">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- styles and other files -->
         <?php include __DIR__ . "/../included/common.included.php" ?>
-        <link rel="stylesheet" href="/assets/styles/css/home.style.css" type="text/css">
+        <link rel="stylesheet" href="/assets/styles/css/home.style.css">
 
         <title>Home - Movie App</title>
 
@@ -52,7 +52,7 @@
                     echo "<a href='/movie/" . $data['results'][$i]['id'] . "' class='movie'>";
                     echo "<div>";
 
-                    $imgPath = imageExists($data['results'][$i]['poster_path'], "w200");
+                    $imgPath = MovieModel::doesMovieImageExists($data['results'][$i]['poster_path'], "w200");
 
                     echo "<img src='$imgPath'>";
                     echo "<p class='title'>" . $data['results'][$i]['title'] . "</p>";
