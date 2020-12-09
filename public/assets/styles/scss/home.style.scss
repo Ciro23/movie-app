@@ -1,7 +1,7 @@
 @import "common.style.scss";
 
 html {
-    background: linear-gradient($background, #1f1f1f);
+    background: linear-gradient($background, $secondBackground);
 }
 
 .movies-container {

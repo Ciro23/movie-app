@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+.vote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  float: right;
+  background-color: #333333;
+  border: solid 0.05rem #707070;
+  text-align: center;
+  border-radius: 50%;
+}
+
+html {
+  background: -webkit-gradient(linear, left top, left bottom, from(#121212), to(#1f1f1f));
+  background: linear-gradient(#121212, #1f1f1f);
+  min-height: 100vh;
+}
+
+.login-signup-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.form-container {
+  background-color: #1f1f1f;
+  width: 35rem;
+  height: 36rem;
+  padding: 2rem 3.5rem 3.5rem 3.5rem;
+  border-radius: 0.8rem;
+}
+
+.form-container h1 {
+  color: white;
+  text-align: center;
+  font-weight: 400;
+}
+
+.form-container p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #e32727;
+  margin: 1rem 0;
+  height: 2.5rem;
+}
+
+#login.form-container form {
+  height: 44%;
+}
+
+#signup.form-container form {
+  height: 60%;
+}
+
+.form-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-container form input {
+  background-color: #1f1f1f;
+  border: none;
+  border: solid 0.2rem #333333;
+  color: white;
+  font-size: 1.4rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+}
+
+.form-container form input[type=submit] {
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 0.8rem 1rem;
+  background-color: #333333;
+  -webkit-transition: 0.05s ease-in-out;
+  transition: 0.05s ease-in-out;
+  outline: none;
+}
+
+.form-container form input[type=submit]:hover {
+  background-color: #3d3d3d;
+}
+
+.login-signup-container a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.45rem;
+  text-align: center;
+  display: block;
+  margin-top: 0.5rem;
+}

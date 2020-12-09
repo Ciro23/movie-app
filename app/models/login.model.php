@@ -2,6 +2,8 @@
 
 class LoginModel extends Model {
 
+    public $feedbackNegative;
+
     public function login($userModel) {
         // gets $username and $password
         extract($_POST);
@@ -26,8 +28,8 @@ class LoginModel extends Model {
 
         // saves the username and the error and returns
         if ($return) {
-            $_SESSION['feedback-negative']['error'] = $error;
-            $_SESSION['feedback-negative']['username'] = $username;
+            $this->feedbackNegative['error'] = $error;
+            $this->feedbackNegative['username'] = $username;
             return false;
         }
 
@@ -43,7 +45,7 @@ class LoginModel extends Model {
 
     private function usernameValidate($username) {
         if (empty($username)) {
-            return "username-empty";
+            return "username-cannot-be-empty";
         }
 
         return false;
@@ -51,7 +53,7 @@ class LoginModel extends Model {
 
     private function passwordValidate($password) {
         if (empty($password)) {
-            return "password-empty";
+            return "password-cannot-be-empty";
         }
 
         return false;

@@ -4,9 +4,16 @@ class SignupController extends Controller {
 
     public function index() {
         if (!isset($_SESSION['username'])) {
-            $this->view("signup");
+            // gets the error and the username from the url query
+            $data['error'] = $_GET['error'] ?? "";
+            $data['username'] = $_GET['username'] ?? "";
+
+            // replaces dashes with spaces and uppercase the first letter
+            $data['error'] = ucfirst(str_replace("-", " ", $data['error']));
+
+            $this->view("signup", $data);
         } else {
-            $this->view("pagenotfound");
+            header("Location: /");
         }
     }
 
@@ -16,47 +23,7 @@ class SignupController extends Controller {
         if ($signupModel->signup($this->model("user"))) {
             header("Location: /user/" . $_SESSION['username']);
         } else {
-            $urlQuery = "error=" . $_SESSION['feedback-negative']['error'] . "&username=" . $_SESSION['feedback-negative']['username'];
-
-            switch($_SESSION['feedback-negative']['error']) {
-                // username error handling
-                case "username-empty":
-                    header("Location: /signup/?" . $urlQuery);
-                    break;
-                    
-                case "username-shorter-than-3-characters":
-                    header("Location: /signup/?" . $urlQuery);
-                    break;
-
-                case "username-longer-than-20-characters":
-                    header("Location: /signup/?" . $urlQuery);
-                    break;
-
-                case "username-contains-special-characters":
-                    header("Location: /signup/?" . $urlQuery);
-                    break;
-                
-                case "username-already-taken":
-                    header("Location: /signup/?" . $urlQuery);
-                    break;
-
-                // password error handling
-                case "password-empty":
-                    header("Location: /signup/?" . $urlQuery);
-                    break;
-                    
-                case "password-shorter-than-6-characters":
-                    header("Location: /signup/?" . $urlQuery);
-                    break;
-
-                case "password-longer-than-64-characters":
-                    header("Location: /signup/?" . $urlQuery);
-                    break;
-
-                case "passwords-dont-match":
-                    header("Location: /signup/?" . $urlQuery);
-                    break;
-            }
+            header("Location: /signup/?error=" . $signupModel->feedbackNegative['error'] . "&username=" . $signupModel->feedbackNegative['username']);
         }
     }
 }

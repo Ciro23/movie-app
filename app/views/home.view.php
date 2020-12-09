@@ -3,15 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - Movie App</title>
 
         <!-- styles and other files -->
         <?php include __DIR__ . "/../included/common.included.php" ?>
         <link rel="stylesheet" href="/assets/styles/css/home.style.css">
 
-        <title>Home - Movie App</title>
-
         <!-- jQuery scripts -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
         $(document).ready(function() {
             // animates the movie card when hovering

@@ -3,29 +3,24 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><?= $data['title'] ?> - Movie App</title>
 
         <!-- styles and other files -->
         <?php
         include __DIR__ . "/../included/common.included.php";
-        
         $imgPath = MovieModel::doesMovieImageExists($data['backdrop_path'], "original", "");
         ?>
-        
+        <link rel="stylesheet" href="/assets/styles/css/movie.style.css">
+
         <style>
             html {
                 background-image: url(<?= $imgPath ?>);
             }
         </style>
 
-        <link rel="stylesheet" href="/assets/styles/css/movie.style.css">
-
-        <title><?= $data['title'] ?> - Movie App</title>
-
         <!-- jQuery scripts -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
         $(document).ready(function() {
-
             var cast = <?= json_encode($data['cast']); ?>;
             // shows all the cast
             $(".show-all-cast-btn").on("click", function() {
@@ -48,7 +43,7 @@
     <body>
         <?php include __DIR__ . "/../included/nav-bar.included.php" ?>
         
-        <div class="movie">
+        <div class="movie-container">
             <div class="movie-details">
 
                 <?php

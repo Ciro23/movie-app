@@ -2,6 +2,8 @@
 
 class SignupModel extends Model {
 
+    public $feedbackNegative;
+
     public function signup($userModel) {
         // gets $username, $password and $repassword
         extract($_POST);
@@ -17,7 +19,7 @@ class SignupModel extends Model {
             $return = true;
 
         } else if ($userModel->doesUserExists($username)) {
-            $error = "username-already-taken";
+            $error = "username-is-already-taken";
             $return = true;
 
         } else if ($error = $this->validatePassword($password, $repassword)) {
@@ -26,8 +28,8 @@ class SignupModel extends Model {
 
         // saves the username and the error and returns
         if ($return) {
-            $_SESSION['feedback-negative']['error'] = $error;
-            $_SESSION['feedback-negative']['username'] = $username;
+            $this->feedbackNegative['error'] = $error;
+            $this->feedbackNegative['username'] = $username;
             return false;
         }
 
@@ -45,19 +47,19 @@ class SignupModel extends Model {
 
     private function validateUsername($username) {
         if (empty($username)) {
-            return "username-empty";
+            return "username-cannot-be-empty";
         }
 
         if (strlen($username) < 3) {
-            return "username-shorter-than-3-characters";
+            return "username-must-be-longer-than-3-characters";
         }
 
         if (strlen($username) > 20) {
-            return "username-longer-than-20-characters";
+            return "username-must-be-shorter-than-20-characters";
         }
 
         if (preg_match("/[^A-Za-z0-9]/", $username)) {
-            return "username-contains-special-characters";
+            return "username-cannot-contains-special-characters";
         }
 
         return false;
@@ -65,19 +67,19 @@ class SignupModel extends Model {
 
     private function validatePassword($password, $repassword) {
         if (empty($password)) {
-            return "password-empty";
+            return "password-cannot-be-empty";
         }
         
         if (strlen($password) < 6) {
-            return "password-shorter-than-6-characters";
+            return "password-must-be-longer-than-6-characters";
         }
 
         if (strlen($password) > 64) {
-            return "password-longer-than-64-characters";
+            return "password-must-be-shorter-than-64-characters";
         }
 
         if ($password != $repassword) {
-            return "passwords-dont-match";
+            return "passwords-does-not-match";
         }
 
         return false;
