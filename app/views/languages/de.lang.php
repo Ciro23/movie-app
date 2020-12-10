@@ -15,6 +15,7 @@ $lang['total_results']['results_for'] = " ergebnisse für ";
 
 // movie page
 $lang['add_to_watchlist'] = "Auf die Beobachtungsliste";
+$lang['remove_from_watchlist'] = "Von der Beobachtungsliste entfernen";
 $lang['director'] = "Direktor";
 $lang['genres'] = "Genres";
 $lang['release_date'] = "Veröffentlichungsdatum";

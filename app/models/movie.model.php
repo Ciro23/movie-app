@@ -14,33 +14,6 @@ class MovieModel extends Model {
         }
     }
 
-    // return a specific movie details
-    public function getMovieDetails($id) {
-        // get the json file into a string variable
-        $tmdbUrl = "https://api.themoviedb.org/3/movie/"
-        . $id
-        . "?api_key="
-        . $_ENV['apiKey']
-        . "&language="
-        . $_COOKIE['language'];
-
-        $json = @file_get_contents($tmdbUrl);
-
-        if ($data = json_decode($json, true)) {
-            // formats the date, the budget and the runtime
-            $data['release_date'] = $this->formatDate($data['release_date']);
-            $data['budget'] = $this->formatBudget($data['budget']);
-            $data['runtime'] = $this->formatRuntime($data['runtime']);
-
-            // adds the cast to the data array
-            $data = array_merge($data, $this->getCredits($id));
-            // saves the director name
-            $data['crew']['director'] = $this->getDirector($data['crew']);
-        }
-        
-        return $data;
-    }
-
     // return a list of movies sorted differently
     public function getMovieList($filter, $page) {
         // get the json file into a string variable
@@ -96,6 +69,48 @@ class MovieModel extends Model {
         }
 
         return $data;
+    }
+
+    // return a specific movie details
+    public function getMovieDetails($id) {
+        // get the json file into a string variable
+        $tmdbUrl = "https://api.themoviedb.org/3/movie/"
+        . $id
+        . "?api_key="
+        . $_ENV['apiKey']
+        . "&language="
+        . $_COOKIE['language'];
+
+        $json = @file_get_contents($tmdbUrl);
+
+        if ($data = json_decode($json, true)) {
+            // formats the date, the budget and the runtime
+            $data['release_date'] = $this->formatDate($data['release_date']);
+            $data['budget'] = $this->formatBudget($data['budget']);
+            $data['runtime'] = $this->formatRuntime($data['runtime']);
+
+            // adds the cast to the data array
+            $data = array_merge($data, $this->getCredits($id));
+            // saves the director name
+            $data['crew']['director'] = $this->getDirector($data['crew']);
+
+            // checks if the movie is in the watchlist of the current user
+            $data['isMovieInWatchlist'] = $this->isMovieInWatchlist($id);
+        }
+        
+        return $data;
+    }
+
+    private function isMovieInWatchlist($id) {
+        if (isset($_SESSION['username'])) {
+            $sql = "SELECT COUNT(*) FROM watchlist WHERE movie = ? AND user = ?";
+            $query = $this->executeStmt($sql, [$id, $_SESSION['username']]);
+
+            if ($query->fetch(PDO::FETCH_COLUMN) == 1) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private function formatDate($date) {

@@ -1,22 +1,14 @@
+<?php $imgPath = MovieModel::doesMovieImageExists($data['backdrop_path'], "original", "") ?>
 <!DOCTYPE html>
-<html lang="<?= $_COOKIE['language']?>" dir="ltr">
+<html lang="<?= $_COOKIE['language']?>" dir="ltr" style="background-image: url(<?= $imgPath ?>)">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?= $data['title'] ?> - Movie App</title>
 
         <!-- styles and other files -->
-        <?php
-        include __DIR__ . "/../included/common.included.php";
-        $imgPath = MovieModel::doesMovieImageExists($data['backdrop_path'], "original", "");
-        ?>
+        <?php include __DIR__ . "/../included/common.included.php" ?>
         <link rel="stylesheet" href="/assets/styles/css/movie.style.css">
-
-        <style>
-            html {
-                background-image: url(<?= $imgPath ?>);
-            }
-        </style>
 
         <!-- jQuery scripts -->
         <script>
@@ -56,9 +48,21 @@
                     echo "<h1>" . $data['title'] . "</h1>";
                     echo "<span class='vote'>" . $data['vote_average'] . "</span>";
 
-                    echo "<span class='add-to-watchlist'>";
-                    echo "<img src='/public/assets/icons/bookmark_empty.icon.png'>" . $lang['add_to_watchlist'];
-                    echo "</span>";
+                    if ($data['isMovieInWatchlist']) {
+                        echo "<form method='POST'>";
+                        echo "<span>";
+                        echo "<input type='submit' class='watchlist-button' id='remove-from-watchlist'>";
+                        echo "<img src='/public/assets/icons/bookmark_empty.icon.png'>" . $lang['remove_from_watchlist'];
+                        echo "</span>";
+                        echo "</form>";
+                    } else {
+                        echo "<form method='POST'>";
+                        echo "<span>";
+                        echo "<input type='submit' class='watchlist-button' id='add-to-watchlist'>";
+                        echo "<img src='/public/assets/icons/bookmark_empty.icon.png'>" . $lang['add_to_watchlist'];
+                        echo "</span>";
+                        echo "</form>";
+                    }
 
                     echo "<p class='overview'>" . $data['overview'] . "</p>";
                     echo "<p class='director'>" . $lang['director'] . ": " . $data['crew']['director'] . "</p>";

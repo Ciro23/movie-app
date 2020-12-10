@@ -15,6 +15,7 @@ $lang['total_results']['results_for'] = " results for ";
 
 // movie page
 $lang['add_to_watchlist'] = "Add to watchlist";
+$lang['remove_from_watchlist'] = "Remove from watchlist";
 $lang['director'] = "Director";
 $lang['genres'] = "Genres";
 $lang['release_date'] = "Release date";
