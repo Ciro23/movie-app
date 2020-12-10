@@ -3,7 +3,6 @@
 class Controller {
 
     protected function model($model) {
-        require_once __DIR__ . "/../models/" . $model . ".model.php";
         $model .= "model";
         return new $model();
     }
