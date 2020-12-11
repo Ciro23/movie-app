@@ -4,7 +4,7 @@
 require_once __DIR__ . "/../vendor/autoload.php";
 
 // saves the env vars in the $_ENV superglobal
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../");
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../app/config/");
 $dotenv->load();
 
 // sets the default language if no one is selected
