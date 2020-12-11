@@ -145,7 +145,7 @@ class MovieModel extends Model {
     *
     * @param int $id, the movie id
     */
-    public function removeFromWatchlistAction($id) {
+    public function removeFromWatchlist($id) {
         $sql = "DELETE FROM watchlist WHERE movie = ? AND user = ?";
         $this->executeStmt($sql, [$id, $_SESSION['username']]);
     }
