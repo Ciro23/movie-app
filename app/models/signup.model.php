@@ -2,8 +2,17 @@
 
 class SignupModel extends Model {
 
+    /*
+    * @var array $feedbackNegative, saves the error and the username on failure
+    */
     public $feedbackNegative;
 
+    /*
+    * perform the signup action
+    * @param $userModel
+    *
+    * @return bool, success status
+    */
     public function signup($userModel) {
         // gets $username, $password and $repassword
         extract($_POST);
@@ -26,25 +35,35 @@ class SignupModel extends Model {
             $return = true;
         }
 
-        // saves the username and the error and returns
-        if ($return) {
-            $this->feedbackNegative['error'] = $error;
-            $this->feedbackNegative['username'] = $username;
-            return false;
+        // continues only if there are no errors
+        if (!$return) {
+            // hashes the password
+            $password = password_hash($password, PASSWORD_DEFAULT);
+
+            // creates a new row in the db
+            if ($this->insertUserToDb($username, $password)) {
+                // creates the session
+                $_SESSION['username'] = $username;
+
+                return true;
+            } else {
+                $error = "something-went-wrong";
+            }
         }
 
-        // hashes the password
-        $password = password_hash($password, PASSWORD_DEFAULT);
-
-        // creates a new row in the db
-        $this->insertUserToDb($username, $password);
-
-        // creates the session
-        $_SESSION['username'] = $username;
-
-        return true;
+        // saves the error and the username and returns false
+        $this->feedbackNegative['error'] = $error;
+        $this->feedbackNegative['username'] = $username;
+        return false;
     }
 
+    /*
+    * checks if the username is valid
+    *
+    * @param string $username
+    *
+    * @return string|false, first on error, false otherwise
+    */
     private function validateUsername($username) {
         if (empty($username)) {
             return "username-cannot-be-empty";
@@ -65,6 +84,14 @@ class SignupModel extends Model {
         return false;
     }
 
+    /*
+    * checks if the password is valid
+    *
+    * @param string $password
+    * @param string $repassword
+    *
+    * @return string|false, first on error, false otherwise
+    */
     private function validatePassword($password, $repassword) {
         if (empty($password)) {
             return "password-cannot-be-empty";
@@ -85,8 +112,19 @@ class SignupModel extends Model {
         return false;
     }
 
+    /*
+    * insert the new user to the database
+    *
+    * @param string $username
+    * @param string $password
+    *
+    * @return bool, success status
+    */
     private function insertUserToDb($username, $password) {
         $sql = "INSERT INTO user (username, password) VALUES (?, ?)";
-        $this->executeStmt($sql, [$username, $password]);
+        if ($this->executeStmt($sql, [$username, $password])) {
+            return true;
+        }
+        return !$this->error = true;
     }
 }

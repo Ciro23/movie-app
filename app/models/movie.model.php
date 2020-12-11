@@ -2,19 +2,35 @@
 
 class MovieModel extends Model {
 
-    public static function doesMovieImageExists($image, $width, $replace = "none") {
-        if ($replace == "none") {
+    /*
+    * checks if the image of a movie exists
+    *
+    * @param string $image, the image path
+    * @param string $width, the image width (original, w200...)
+    * @param string $replace, if the image must be replaced with a default one in case of missing
+    *
+    * @return string, the image path
+    */
+    public static function doesMovieImageExists($image, $width, $replace = "yes") {
+        if ($replace == "yes") {
             $replace = $_ENV['defaultImgPath'];
         }
-    
+        
         if ($image == null) {
             return $replace;
-        } else {
-            return $_ENV['imageBaseUrl'] . $width . $image;
         }
+
+        return $_ENV['imageBaseUrl'] . $width . $image;
     }
 
-    // return a list of movies sorted differently
+    /*
+    * returns a movie list sorted in different ways
+    *
+    * @param string $filter, the filter to select movies
+    * @param string $page
+    *
+    * @return array, containing all the data
+    */
     public function getMovieList($filter, $page) {
         // get the json file into a string variable
         $tmdbUrl = "https://api.themoviedb.org/3/movie/"
@@ -42,7 +58,14 @@ class MovieModel extends Model {
         return $data;
     }
 
-    // return a list of movie by searched title
+    /*
+    * searches for movies
+    *
+    * @param string $filter, the filter to select movies
+    * @param string $page
+    *
+    * @return array, containing all the data
+    */
     public function searchMovie($query, $page) {
         $tmdbUrl = "https://api.themoviedb.org/3/search/movie?api_key="
         . $_ENV['apiKey']
@@ -71,7 +94,13 @@ class MovieModel extends Model {
         return $data;
     }
 
-    // return a specific movie details
+    /*
+    * returns details of a specific movie
+    *
+    * @param int $id, the movie id
+    *
+    * @return array, containing all the data
+    */
     public function getMovieDetails($id) {
         // get the json file into a string variable
         $tmdbUrl = "https://api.themoviedb.org/3/movie/"
@@ -95,24 +124,58 @@ class MovieModel extends Model {
             $data['crew']['director'] = $this->getDirector($data['crew']);
 
             // checks if the movie is in the watchlist of the current user
-            $data['isMovieInWatchlist'] = $this->isMovieInWatchlist($id);
+            $data['isMovieInWatchlist'] = $this->isInWatchlist($id);
         }
         
         return $data;
     }
 
-    private function isMovieInWatchlist($id) {
+    /*
+    * adds a movie to the user watchlist
+    *
+    * @param int $id, the movie id
+    */
+    public function addToWatchlist($id) {
+        $sql = "INSERT INTO watchlist (movie, user) VALUES (?, ?)";
+        $this->executeStmt($sql, [$id, $_SESSION['username']]);
+    }
+
+    /*
+    * removes a movie from the user watchlist
+    *
+    * @param int $id, the movie id
+    */
+    public function removeFromWatchlistAction($id) {
+        $sql = "DELETE FROM watchlist WHERE movie = ? AND user = ?";
+        $this->executeStmt($sql, [$id, $_SESSION['username']]);
+    }
+
+    /*
+    * checks if a movie is in the user watchlist
+    *
+    * @param int $id, the movie id
+    *
+    * @return bool, success status
+    */
+    private function isInWatchlist($id) {
         if (isset($_SESSION['username'])) {
             $sql = "SELECT COUNT(*) FROM watchlist WHERE movie = ? AND user = ?";
-            $query = $this->executeStmt($sql, [$id, $_SESSION['username']]);
-
-            if ($query->fetch(PDO::FETCH_COLUMN) == 1) {
-                return true;
+            if ($query = $this->executeStmt($sql, [$id, $_SESSION['username']])) {
+                if ($query->fetch(PDO::FETCH_COLUMN) == 1) {
+                    return true;
+                }
             }
         }
         return false;
     }
 
+    /*
+    * formats the date
+    *
+    * @param string $date
+    *
+    * @return string, the formatted date
+    */
     private function formatDate($date) {
         $date = date_create($date);
         $date = date_format($date, "d/m/Y");
@@ -120,6 +183,13 @@ class MovieModel extends Model {
         return $date;
     }
 
+    /*
+    * formats the runtime
+    *
+    * @param string $runtime
+    *
+    * @return string, the formatted runtime
+    */
     private function formatRuntime($runtime) {
         $hrs = floor($runtime / 60);
         $mins = $runtime - $hrs * 60;
@@ -127,6 +197,13 @@ class MovieModel extends Model {
         return $hrs . "h " . $mins . "m";
     }
 
+    /*
+    * formats the budget
+    *
+    * @param string $budget
+    *
+    * @return string, the formatted budget
+    */
     private function formatBudget($budget) {
         $budget = strval($budget);
         $budgetNew = "";
@@ -141,6 +218,13 @@ class MovieModel extends Model {
         return strrev($budgetNew);
     }
 
+    /*
+    * gets the minimum page to display in the page selection menu
+    *
+    * @param int $page
+    *
+    * @return int, the minimum page
+    */
     private function getMinPage($page) {
         for ($i = $page; $i >= $page - 3 && $i > 0; $i--) {
             $minPage = $i;
@@ -149,6 +233,14 @@ class MovieModel extends Model {
         return $minPage;
     }
 
+    /*
+    * gets the maximum page to display in the page selection menu
+    *
+    * @param int $page
+    * @param int $total_pages
+    *
+    * @return int, the maximum page
+    */
     private function getMaxPage($page, $total_pages) {
         $maxPage = 0;
         for ($i = $page; $i <= $page + 3 && $maxPage < $total_pages; $i++) {
@@ -158,7 +250,13 @@ class MovieModel extends Model {
         return $maxPage;
     }
 
-    // gets the cast and the crew of the movie
+    /*
+    * gets the cast and the crew details
+    *
+    * @param int $id, the movie id
+    *
+    * @return array, containing all the cast and crew data
+    */
     private function getCredits($id) {
         // get the json file into a string variable
         $tmdbUrl = "https://api.themoviedb.org/3/movie/"
@@ -171,7 +269,13 @@ class MovieModel extends Model {
         return json_decode($json, true);
     }
 
-    // find the movie director
+    /*
+    * gets the director name
+    *
+    * @param array $crew
+    *
+    * @return string, the director name
+    */
     private function getDirector($crew) {
         for ($i = 0; $i < count($crew); $i++) {
             if ($crew[$i]['job'] == "Director") {
