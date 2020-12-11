@@ -1,5 +1,4 @@
 # Movie App
-## What is it?
 This is a simple web app to display all the movies from the TMDB API.
 It's created with the scope of learning the MVC pattern.
 
