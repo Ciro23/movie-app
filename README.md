@@ -3,7 +3,7 @@
 This is a simple web app to display all the movies from the TMDB API.
 It's created with the scope of learning the MVC pattern.
 
-## Which features does it have?
+## Features
 - Display movies ordered by different filters (popular, now playing, top rated, upcoming);
 - Search for movies by title;
 - Display specific movie details;
