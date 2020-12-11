@@ -27,7 +27,9 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute("GET", "/search/{query}[/[{page:\d+}[/]]]", "HomeController/searchMovie");
 
     // movie page route
-    $r->addRoute("GET", "/movie/{id:\d+}", "MovieController/index");
+    $r->addRoute("GET", "/movie/{id:\d+}[/]", "MovieController/index");
+    $r->addRoute("POST", "/movie/{id:\d+}/add-to-watchlist[/]", "MovieController/addToWatchlist");
+    $r->addRoute("POST", "/movie/{id:\d+}/remove-from-watchlist[/]", "MovieController/removeFromWatchlist");
 
     // signup, login and logout routes
     $r->addRoute("GET", "/{type:signup}[/[?{error}]]", "SignupController/index");
