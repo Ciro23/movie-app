@@ -49,18 +49,16 @@
                     echo "<span class='vote'>" . $data['vote_average'] . "</span>";
 
                     if ($data['isMovieInWatchlist']) {
-                        echo "<form method='POST'>";
-                        echo "<span>";
-                        echo "<input type='submit' class='watchlist-button' id='remove-from-watchlist'>";
-                        echo "<img src='/public/assets/icons/bookmark_empty.icon.png'>" . $lang['remove_from_watchlist'];
-                        echo "</span>";
+                        echo "<form method='POST' action='" . $_SERVER['REQUEST_URI'] . "/remove-from-watchlist' class='watchlist-button'>";
+                        echo "<button type='submit'>";
+                        echo "<img src='/public/assets/icons/bookmark_full.icon.png'>" . $lang['remove_from_watchlist'];
+                        echo "</button>";
                         echo "</form>";
                     } else {
-                        echo "<form method='POST'>";
-                        echo "<span>";
-                        echo "<input type='submit' class='watchlist-button' id='add-to-watchlist'>";
+                        echo "<form method='POST' action='" . $_SERVER['REQUEST_URI'] . "/add-to-watchlist' class='watchlist-button'>";
+                        echo "<button type='submit'>";
                         echo "<img src='/public/assets/icons/bookmark_empty.icon.png'>" . $lang['add_to_watchlist'];
-                        echo "</span>";
+                        echo "</button>";
                         echo "</form>";
                     }
 
