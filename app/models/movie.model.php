@@ -131,6 +131,24 @@ class MovieModel extends Model {
     }
 
     /*
+    * gets the movies details from the user watchlist
+    *
+    * @param array $watchlist, an array containing all the movies id
+    *
+    * @return array
+    */
+    public function getMoviesFromWatchlist($watchlist) {
+        $data = [];
+        if (count($watchlist)) {
+            foreach($watchlist as $index => $movie) {
+                $movieId = $movie['movie'];
+                $data[$index] = $this->getMovieDetails($movieId);
+            }
+        }
+        return $data;
+    }
+
+    /*
     * adds a movie to the user watchlist
     *
     * @param int $id, the movie id
