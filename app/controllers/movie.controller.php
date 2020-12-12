@@ -9,8 +9,8 @@ class MovieController extends Controller {
     */
     public function index($id) {
         // fetches data from the movie model
-        $model = $this->model("movie");
-        $data = $model->getMovieDetails($id);
+        $movieModel = $this->model("movie");
+        $data = $movieModel->getMovieDetails($id);
         
         $this->view("movie", $data);
     }
@@ -22,8 +22,8 @@ class MovieController extends Controller {
     */
     public function addToWatchlist($id) {
         if (isset($_SESSION['username'])) {
-            $model = $this->model("movie");
-            $model->addToWatchlist($id);
+            $movieModel = $this->model("movie");
+            $movieModel->addToWatchlist($id);
             header("Location: /movie/" . $id);
         } else {
             header("Location: /login");
@@ -37,8 +37,8 @@ class MovieController extends Controller {
     */
     public function removeFromWatchlist($id) {
         if (isset($_SESSION['username'])) {
-            $model = $this->model("movie");
-            $model->removeFromWatchlist($id);
+            $movieModel = $this->model("movie");
+            $movieModel->removeFromWatchlist($id);
             header("Location: /movie/" . $id);
         } else {
             header("Location: /login");
