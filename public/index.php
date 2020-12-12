@@ -39,7 +39,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute("GET", "/logout[/]", "LoginController/logout");
 
     // user routes
-    $r->addRoute("GET", "/{type:user}[/{user}[/]]", "UserController/index");
+    $r->addRoute("GET", "/user/{user}[/]", "UserController/index");
 });
 
 $httpMethod = $_SERVER['REQUEST_METHOD'];
