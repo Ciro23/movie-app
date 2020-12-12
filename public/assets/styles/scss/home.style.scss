@@ -1,4 +1,5 @@
 @import "common.style.scss";
+@import "movie-grid.style.scss";
 
 html {
     background: linear-gradient($background, $secondBackground);
@@ -33,51 +34,6 @@ html {
 .total-results {
     margin-top: 10rem;
     color: white;
-}
-
-.movie-grid {
-    display: flex;
-    flex-wrap: wrap;
-    grid-column-gap: 3rem;
-    grid-row-gap: 3rem;
-    justify-content: space-around;
-    margin: 4rem 0 3rem 0;
-}
-
-.movie-grid a {
-    color: white;
-    text-decoration: none;
-}
-
-.movie {
-    width: 20rem;
-    border-radius: 0.4rem;
-    padding-bottom: 2rem;
-    background-color: black;
-    position: relative;
-}
-
-.movie img {
-    border-radius: 0.4rem 0.4rem 0 0;
-    width: 20rem;
-}
-
-.title {
-    font-size: 1.65rem;
-    margin: 1rem 0 0 1.5rem;
-    display: inline-block;
-    width: 65%;
-}
-
-.vote {
-    margin: 0.3rem 1rem 0 0;
-    width: 3.2rem;
-    height: 3.2rem;
-    font-size: 1.4rem;
-}
-
-.filter {
-    text-align: center;
 }
 
 .page-filter {
