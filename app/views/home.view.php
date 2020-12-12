@@ -9,18 +9,8 @@
         <?php include __DIR__ . "/../included/common.included.php" ?>
         <link rel="stylesheet" href="/assets/styles/css/home.style.css">
 
-        <!-- jQuery scripts -->
-        <script>
-        $(document).ready(function() {
-            // animates the movie card when hovering
-            $(".movie").hover(function() {
-                $(this).animate({top: "-20"}, 150);
-            }, function() {
-                $(this).animate({top: "0"}, 150);
-            });
-        });
-        </script>
-
+        <!-- movie grid animation script -->
+        <script src="/assets/js-scripts/movie-grid.script.js"></script>
     </head>
     <body>
         <?php include __DIR__ . "/../included/nav-bar.included.php" ?>
@@ -46,15 +36,15 @@
 
             <div class='movie-grid'>
                 <?php
-                for ($i = 0; $i < count($data['results']); $i++) {
-                    echo "<a href='/movie/" . $data['results'][$i]['id'] . "' class='movie'>";
+                foreach ($data['results'] as $index => $movie) {
+                    echo "<a href='/movie/" . $movie['id'] . "' class='movie'>";
                     echo "<div>";
 
-                    $imgPath = MovieModel::doesMovieImageExists($data['results'][$i]['poster_path'], "w200");
+                    $imgPath = MovieModel::doesMovieImageExists($movie['poster_path'], "w200");
 
                     echo "<img src='$imgPath'>";
-                    echo "<p class='title'>" . $data['results'][$i]['title'] . "</p>";
-                    echo "<span class='vote'>" . $data['results'][$i]['vote_average'] . "</span>";
+                    echo "<p class='title'>" . $movie['title'] . "</p>";
+                    echo "<span class='vote'>" . $movie['vote_average'] . "</span>";
                     echo "</div>";
                     echo "</a>";
                 }
