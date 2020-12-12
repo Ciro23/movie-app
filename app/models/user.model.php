@@ -43,7 +43,7 @@ class UserModel extends Model {
     * @return string|false, first on success, false otherwise
     */
     public function getUserPassword($username) {
-        $sql = "SELECT password FROM user WHERE username = ?";
+        $sql = "SELECT password FROM user WHERE BINARY username = ?";
         if ($query = $this->executeStmt($sql, [$username])) {
             return $query->fetch(PDO::FETCH_COLUMN);
         }
