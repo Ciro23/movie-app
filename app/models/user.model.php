@@ -9,7 +9,7 @@ class UserModel extends Model {
     *
     * @return array|false, first on success, false otherwise
     */
-    protected function getWatchlist($username) {
+    protected function getUserWatchlist($username) {
         $sql = "SELECT movie, addedOn FROM watchlist WHERE user = ?";
         if ($query = $this->executeStmt($sql, [$username])) {
             return $query->fetchAll(PDO::FETCH_ASSOC);
@@ -21,11 +21,12 @@ class UserModel extends Model {
     * checks if the user exists
     *
     * @param string $username
+    * @param string $binary, if the query should be case sensitive
     *
     * @return bool, success status
     */
-    public function doesUserExists($username) {
-        $sql = "SELECT COUNT(*) FROM user WHERE username = ?";
+    public function doesUserExists($username, $binary = "") {
+        $sql = "SELECT COUNT(*) FROM user WHERE $binary username = ?";
         if ($query = $this->executeStmt($sql, [$username])) {
             if ($query->fetch(PDO::FETCH_COLUMN) == 1) {
                 return true;
