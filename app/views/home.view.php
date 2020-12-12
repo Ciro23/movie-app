@@ -44,7 +44,7 @@
                 }
                 ?>
 
-                <div class='movie-grid'>
+            <div class='movie-grid'>
                 <?php
                 for ($i = 0; $i < count($data['results']); $i++) {
                     echo "<a href='/movie/" . $data['results'][$i]['id'] . "' class='movie'>";
@@ -59,41 +59,41 @@
                     echo "</a>";
                 }
                 ?>
-                </div>
+            </div>
 
-                <div class="filter">
-                    <span class="filter-box page-filter">
-                        <?php
-                        // determines the base root of the url
-                        if (isset($data['movie_filter'])) {
-                            $base = $data['movie_filter'] . "/";
+            <div class="filter">
+                <span class="filter-box page-filter">
+                    <?php
+                    // determines the base root of the url
+                    if (isset($data['movie_filter'])) {
+                        $base = $data['movie_filter'] . "/";
+                    } else {
+                        $base = "search/" . $data['query'] . "/";
+                    }
+
+                    // shows previous page
+                    if ($data['page'] > 1) {
+                        $prev = $data['page'] - 1;
+                        echo "<a href='/" . $base . $prev . "'> < </a>";
+                    }
+
+                    // shows page numbers
+                    for ($i = $data['minPage']; $i <= $data['maxPage']; $i++) {
+                        if ($i == $data['page']) {
+                            echo "<a class='current-page'> " . $i . "</a>";
                         } else {
-                            $base = "search/" . $data['query'] . "/";
+                            echo "<a href='/" . $base . $i . "'> " . $i . "</a>";
                         }
+                    }
 
-                        // shows previous page
-                        if ($data['page'] > 1) {
-                            $prev = $data['page'] - 1;
-                            echo "<a href='/" . $base . $prev . "'> < </a>";
-                        }
-
-                        // shows page numbers
-                        for ($i = $data['minPage']; $i <= $data['maxPage']; $i++) {
-                            if ($i == $data['page']) {
-                                echo "<a class='current-page'> " . $i . "</a>";
-                            } else {
-                                echo "<a href='/" . $base . $i . "'> " . $i . "</a>";
-                            }
-                        }
-
-                        // shows next page
-                        if ($data['page'] < $data['total_pages']) {
-                            $next = $data['page'] + 1;
-                            echo "<a href='/" . $base . $next . "'> > </a>";
-                        }
-                        ?>
-                    </span>
+                    // shows next page
+                    if ($data['page'] < $data['total_pages']) {
+                        $next = $data['page'] + 1;
+                        echo "<a href='/" . $base . $next . "'> > </a>";
+                    }
+                    ?>
                 </span>
+            </div>
         </div>
     </body>
 </html>
