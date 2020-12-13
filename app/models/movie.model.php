@@ -141,8 +141,23 @@ class MovieModel extends Model {
         $data = [];
         if (count($watchlist)) {
             foreach($watchlist as $index => $movie) {
-                $movieId = $movie['movie'];
-                $data[$index] = $this->getMovieDetails($movieId);
+                // get the json file into a string variable
+                $tmdbUrl = "https://api.themoviedb.org/3/movie/"
+                . $movie['movie']
+                . "?api_key="
+                . $_ENV['apiKey']
+                . "&language="
+                . $_COOKIE['language'];
+
+                $json = @file_get_contents($tmdbUrl);
+
+                // saves the id, title, poster path and vote average of the movie
+                if ($movieData = json_decode($json, true)) {
+                    $data[$index]['id'] = $movieData['id'];
+                    $data[$index]['title'] = $movieData['title'];
+                    $data[$index]['poster_path'] = $movieData['poster_path'];
+                    $data[$index]['vote_average'] = $movieData['vote_average'];
+                }
             }
         }
         return $data;
