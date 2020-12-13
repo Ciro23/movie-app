@@ -6,9 +6,8 @@ html {
 }
 
 .movies-container {
-    max-width: 113rem;
+    max-width: 112rem;
     margin: 0 auto;
-    padding: 0.5rem;
 }
 
 .filter-box {
@@ -37,8 +36,13 @@ html {
 }
 
 .page-filter {
-    margin: 0 auto;
-    margin-bottom: 30rem;
+    display: flex;
+    justify-content: space-around;
+    margin: 7rem 0 20rem;
+}
+
+.page-filter .filter-box {
+    margin: 0;
 }
 
 .current-page {

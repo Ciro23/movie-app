@@ -8,6 +8,7 @@
 
 html {
   font-size: 10px;
+  min-height: 100vh;
 }
 
 .vote {
@@ -24,42 +25,6 @@ html {
   border: solid 0.05rem #707070;
   text-align: center;
   border-radius: 50%;
-}
-
-html {
-  background: -webkit-gradient(linear, left top, left bottom, from(#121212), to(#1f1f1f));
-  background: linear-gradient(#121212, #1f1f1f);
-}
-
-.movies-container {
-  max-width: 113rem;
-  margin: 0 auto;
-  padding: 0.5rem;
-}
-
-.filter-box {
-  margin-top: 10rem;
-  border-radius: 0.6rem;
-  border: solid 0.05rem #333333;
-  display: inline-block;
-}
-
-.filter-box a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.5rem;
-  border-right: solid 0.05rem #333333;
-  padding: 0.7rem 1.7rem;
-  display: inline-block;
-}
-
-.filter-box a:last-of-type {
-  border: none;
-}
-
-.total-results {
-  margin-top: 10rem;
-  color: white;
 }
 
 .movie-grid {
@@ -107,13 +72,52 @@ html {
   font-size: 1.4rem;
 }
 
-.filter {
-  text-align: center;
+html {
+  background: -webkit-gradient(linear, left top, left bottom, from(#121212), to(#1f1f1f));
+  background: linear-gradient(#121212, #1f1f1f);
+}
+
+.movies-container {
+  max-width: 112rem;
+  margin: 0 auto;
+}
+
+.filter-box {
+  margin-top: 10rem;
+  border-radius: 0.6rem;
+  border: solid 0.05rem #333333;
+  display: inline-block;
+}
+
+.filter-box a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-right: solid 0.05rem #333333;
+  padding: 0.7rem 1.7rem;
+  display: inline-block;
+}
+
+.filter-box a:last-of-type {
+  border: none;
+}
+
+.total-results {
+  margin-top: 10rem;
+  color: white;
 }
 
 .page-filter {
-  margin: 0 auto;
-  margin-bottom: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 7rem 0 20rem;
+}
+
+.page-filter .filter-box {
+  margin: 0;
 }
 
 .current-page {
