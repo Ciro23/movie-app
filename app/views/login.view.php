@@ -22,7 +22,7 @@
                     <input type="submit" value="Login">
                 </form>
             </div>
-            <a href="/signup">Need to signup?</a>
+            <a href="/signup"><?= $lang['login_form']['need_to_signup'] ?></a>
         </div>
     </body>
 </html>

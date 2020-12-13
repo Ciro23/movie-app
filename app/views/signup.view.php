@@ -14,16 +14,16 @@
 
         <div class="login-signup-container">
             <div class="form-container" id="signup">
-                <h1>Signup</h1>
+                <h1><?= $lang['signup_form']['signup'] ?></h1>
                 <p class="error"><?= $data['error'] ?></p>
                 <form action="/signup/action" method="POST">
-                    <input type="text" name="username" maxlength="20" placeholder="Username (2-20 characters, only letters and numbers)" value="<?= $data['username'] ?>">
-                    <input type="password" name="password" maxlength="64" placeholder="Password (6-64 characters)">
-                    <input type="password" name="repassword" maxlength="64" placeholder="Confirm password">
-                    <input type="submit" value="Signup">
+                    <input type="text" name="username" maxlength="20" placeholder="Username (2-20 <?= $lang['signup_form']['username'] ?>)" value="<?= $data['username'] ?>">
+                    <input type="password" name="password" maxlength="64" placeholder="Password (6-64 <?= $lang['signup_form']['password'] ?>)">
+                    <input type="password" name="repassword" maxlength="64" placeholder="<?= $lang['signup_form']['confirm_password'] ?> password">
+                    <input type="submit" value="<?= $lang['signup_form']['signup'] ?>">
                 </form>
             </div>
-            <a href="/login">Already registered?</a>
+            <a href="/login"><?= $lang['signup_form']['already_registered'] ?></a>
         </div>
     </body>
 </html>

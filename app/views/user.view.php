@@ -17,8 +17,8 @@
 
         <div class="user-container">
             <div class="user-header">
+                <h1><?= $data['username'] ?></h1>
                 <?php
-                echo "<h1>" . $data['username'] . "'s watchlist</h1>";
                 if (isset($_SESSION['username']) && $_SESSION['username'] == $data['username']) {
                     echo "<a href='/logout'>Logout</a>";
                 }
@@ -40,7 +40,7 @@
                         echo "</a>";
                     }
                 } else {
-                    echo "<p class='empty-list'>This list is empty :c</p>";
+                    echo "<p class='empty-list'>" . $lang['user']['empty_watchlist'] . "</p>";
                 }
                 ?>
             </div>

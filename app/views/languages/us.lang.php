@@ -1,7 +1,7 @@
 <?php
 
-// nav-bar
-$lang['search-bar'] = "Search movie by title";
+// nav_bar
+$lang['search_bar'] = "Search movie by title";
 
 // homepage
 $lang['movie_filter']['popular'] = "Popular";
@@ -23,3 +23,19 @@ $lang['runtime'] = "Runtime";
 $lang['budget'] = "Budget";
 $lang['actors'] = "Actors";
 $lang['show_all'] = "Show all";
+
+// signup page
+$lang['signup_form']['username'] = "characters, only letters and numbers";
+$lang['signup_form']['password'] = "characters";
+$lang['signup_form']['confirm_password'] = "Confirm";
+$lang['signup_form']['signup'] = "Signup";
+$lang['signup_form']['already_registered'] = "Already registered?";
+
+// login page
+$lang['login_form']['need_to_signup'] = "Need to signup?";
+
+// user profile page
+$lang['user']['empty_watchlist'] = "This list is empty :c";
+
+// page not found
+$lang['page_not_found'] = "Page not found";
