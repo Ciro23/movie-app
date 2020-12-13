@@ -8,6 +8,17 @@ class SignupModel extends Model {
     public $feedbackNegative;
 
     /*
+    * return a user readable formatted error
+    *
+    * @param string error
+    *
+    * @return string, the formatted error
+    */
+    public static function formatError($error) {
+        return ucfirst(str_replace("-", " ", $error));
+    }
+
+    /*
     * perform the signup action
     * @param $userModel
     *
