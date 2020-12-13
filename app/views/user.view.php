@@ -6,14 +6,14 @@
         <title><?= $data['username'] ?> - Movie App</title>
 
         <!-- styles and other files -->
-        <?php include __DIR__ . "/../included/common.included.php" ?>
+        <?php include_once __DIR__ . "/../included/common.included.php" ?>
         <link rel="stylesheet" href="/assets/styles/css/user.style.css">
 
         <!-- movie grid animation script -->
         <script src="/assets/js-scripts/movie-grid.script.js"></script>
     </head>
     <body>
-        <?php include __DIR__ . "/../included/nav-bar.included.php" ?>
+        <?php include_once __DIR__ . "/../included/nav-bar.included.php" ?>
 
         <div class="user-container">
             <div class="user-header">
@@ -45,5 +45,6 @@
                 ?>
             </div>
         </div>
+        <?php include_once __DIR__ . "/../included/footer.included.php" ?>
     </body>
 </html>

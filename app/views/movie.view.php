@@ -7,7 +7,7 @@
         <title><?= $data['title'] ?> - Movie App</title>
 
         <!-- styles and other files -->
-        <?php include __DIR__ . "/../included/common.included.php" ?>
+        <?php include_once __DIR__ . "/../included/common.included.php" ?>
         <link rel="stylesheet" href="/assets/styles/css/movie.style.css">
 
         <!-- jQuery scripts -->
@@ -33,7 +33,7 @@
         </script>
     </head>
     <body>
-        <?php include __DIR__ . "/../included/nav-bar.included.php" ?>
+        <?php include_once __DIR__ . "/../included/nav-bar.included.php" ?>
         
         <div class="movie-container">
             <div class="movie-details">
@@ -86,11 +86,12 @@
                 <span class="cast-grid">
                     <?php
                     $cast = $data['cast'];
-                    include __DIR__ . "/../included/cast.included.php";
+                    include_once __DIR__ . "/../included/cast.included.php";
                     ?>
                 </span>
                 <button class="show-all-cast-btn"><?= $lang['show_all'] ?></button>
             </div>
         </div>
+        <?php include_once __DIR__ . "/../included/footer.included.php" ?>
     </body>
 </html>

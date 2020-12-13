@@ -6,11 +6,11 @@
         <title>Login - Movie App</title>
 
         <!-- styles and other files -->
-        <?php include __DIR__ . "/../included/common.included.php" ?>
+        <?php include_once __DIR__ . "/../included/common.included.php" ?>
         <link rel="stylesheet" href="/assets/styles/css/login-signup.style.css">
     </head>
     <body>
-        <?php include __DIR__ . "/../included/nav-bar.included.php" ?>
+        <?php include_once __DIR__ . "/../included/nav-bar.included.php" ?>
 
         <div class="login-signup-container">
             <div class="form-container" id="login">
@@ -24,5 +24,6 @@
             </div>
             <a href="/signup"><?= $lang['login_form']['need_to_signup'] ?></a>
         </div>
+        <?php include_once __DIR__ . "/../included/footer.included.php" ?>
     </body>
 </html>
