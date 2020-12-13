@@ -27,6 +27,12 @@ html {
   border-radius: 50%;
 }
 
+@media only screen and (max-width: 599px) {
+  html {
+    font-size: 2vw;
+  }
+}
+
 html {
   background-repeat: no-repeat;
   background-size: cover;
@@ -148,7 +154,7 @@ html {
           box-sizing: border-box;
   max-width: 120rem;
   height: 5rem;
-  padding: 0 10rem;
+  padding: 0 5rem;
   background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -230,4 +236,19 @@ html {
 .show-all-cast-btn:hover {
   background-color: black;
   color: white;
+}
+
+@media only screen and (max-width: 599px) {
+  .movie-details {
+    border-radius: 0;
+  }
+  .movie-container {
+    margin-top: 7rem;
+  }
+  .movie-info {
+    padding: 0 1.5rem;
+  }
+  .cast span {
+    grid-column-gap: 2.5rem;
+  }
 }

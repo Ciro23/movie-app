@@ -26,3 +26,9 @@ html {
   text-align: center;
   border-radius: 50%;
 }
+
+@media only screen and (max-width: 599px) {
+  html {
+    font-size: 2vw;
+  }
+}

@@ -25,3 +25,10 @@ html {
     text-align: center;
     border-radius: 50%;
 }
+
+// media query for smartphones
+@media only screen and (max-width: 599px) {
+    html {
+        font-size: 2vw;
+    }
+}
