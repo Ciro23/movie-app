@@ -17,13 +17,12 @@ class UserController extends Controller {
         if ($userModel->doesUserExists($username, "BINARY")) {
             // gets user data
             $data['username'] = $username;
-            $watchlist = $userModel->getUserWatchlist($username);
 
             // creates the movie model
             $movieModel = $this->model("movie");
 
             // gets movies details
-            $data['watchlist'] = $movieModel->getMoviesFromWatchlist($watchlist);
+            $data['watchlist'] = $movieModel->getMoviesFromWatchlist($userModel->getUserWatchlist($username));
         }
 
         $this->view("user", $data);

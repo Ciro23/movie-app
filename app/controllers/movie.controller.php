@@ -24,6 +24,7 @@ class MovieController extends Controller {
         if (isset($_SESSION['username'])) {
             $movieModel = $this->model("movie");
             $movieModel->addToWatchlist($id);
+
             header("Location: /movie/" . $id);
         } else {
             header("Location: /login");
@@ -39,6 +40,7 @@ class MovieController extends Controller {
         if (isset($_SESSION['username'])) {
             $movieModel = $this->model("movie");
             $movieModel->removeFromWatchlist($id);
+            
             header("Location: /movie/" . $id);
         } else {
             header("Location: /login");
