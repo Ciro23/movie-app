@@ -49,12 +49,11 @@ $routeInfo = $dispatcher->dispatch($httpMethod, $uri);
 
 switch ($routeInfo[0]) {
     case FastRoute\Dispatcher::NOT_FOUND:
-        echo "page not found";
-        break;
 
     case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
-        $allowedMethods = $routeInfo[1];
-        echo "forbidden";
+        $controller = "PageNotFoundController";
+        $method = "index";
+        $vars = [];
         break;
 
     case FastRoute\Dispatcher::FOUND:
@@ -65,7 +64,7 @@ switch ($routeInfo[0]) {
         list($controller, $method) = explode("/", $handler);
         
         // makes the sort popular if no one is selected
-        if (!isset($vars['sort'])) {
+        if (!isset($vars['sort']) && $method == "index") {
             $vars['sort'] = "popular";
         }
 
@@ -74,7 +73,8 @@ switch ($routeInfo[0]) {
             $vars['page'] = "1";
         }
         
-        $controller = new $controller();
-        call_user_func_array([$controller, $method], $vars);
         break;
 }
+
+$controller = new $controller();
+call_user_func_array([$controller, $method], $vars);
