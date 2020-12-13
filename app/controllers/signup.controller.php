@@ -12,7 +12,7 @@ class SignupController extends Controller {
             $data['username'] = $_GET['username'] ?? "";
 
             // replaces dashes with spaces and uppercase the first letter
-            $data['error'] = ucfirst(str_replace("-", " ", $data['error']));
+            $data['error'] = SignupModel::formatError($data['error']);
 
             $this->view("signup", $data);
         } else {
