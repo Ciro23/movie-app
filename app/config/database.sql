@@ -44,7 +44,7 @@ CREATE TABLE `watchlist` (
   `id` int(11) NOT NULL,
   `movie` int(11) NOT NULL,
   `user` varchar(20) NOT NULL,
-  `addedOn` datetime DEFAULT current_timestamp()
+  `addedOn` int DEFAULT UNIX_TIMESTAMP()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
