@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= $_COOKIE['language']?>" dir="ltr">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title><?= $data['username'] ?> - Movie App</title>
+
+        <!-- styles and other files -->
+        <?php include __DIR__ . "/../included/common.included.php" ?>
+        <link rel="stylesheet" href="/assets/styles/css/user.style.css">
+
+        <!-- movie grid animation script -->
+        <script src="/assets/js-scripts/movie-grid.script.js"></script>
     </head>
     <body>
-        
+        <?php include __DIR__ . "/../included/nav-bar.included.php" ?>
+
+        <div class="user-container">
+            <div class="user-header">
+                <?php
+                echo "<h1>" . $data['username'] . "'s watchlist</h1>";
+                if (isset($_SESSION['username']) && $_SESSION['username'] == $data['username']) {
+                    echo "<a href='/logout'>Logout</a>";
+                }
+                ?>
+            </div>
+            <div class="movie-grid">
+                <?php
+                if (count($data['watchlist'])) {
+                    foreach($data['watchlist'] as $index => $movie) {
+                        echo "<a href='/movie/" . $movie['id'] . "' class='movie'>";
+                        echo "<div>";
+    
+                        $imgPath = MovieModel::doesMovieImageExists($movie['poster_path'], "w200");
+    
+                        echo "<img src='$imgPath'>";
+                        echo "<p class='title'>" . $movie['title'] . "</p>";
+                        echo "<span class='vote'>" . $movie['vote_average'] . "</span>";
+                        echo "</div>";
+                        echo "</a>";
+                    }
+                } else {
+                    echo "<p class='empty-list'>This list is empty :c</p>";
+                }
+                ?>
+            </div>
+        </div>
     </body>
 </html>
