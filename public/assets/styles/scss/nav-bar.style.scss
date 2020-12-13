@@ -11,10 +11,10 @@
 }
 
 .nav-bar > div {
-    max-width: 113rem;
+    max-width: 114rem;
     height: 100%;
     margin: 0 auto;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
     display: flex;
     align-items: center;
     position: relative;
@@ -29,7 +29,8 @@
 }
 
 .nav-bar input {
-    width: 40rem;
+    width: 40%;
+    max-width: 40rem;
     height: 3.3rem;
     padding: 0 1rem;
     border-radius: 0.6rem;
@@ -41,7 +42,7 @@
 
 .nav-bar span {
     position: absolute;
-    right: 0.5rem;
+    right: 1rem;
 }
 
 .nav-bar span a {
