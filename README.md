@@ -10,7 +10,7 @@ It's created with the scope of learning the MVC pattern.
 - Basic pagination system;
 - Basic user signup/login;
 - Add/remove a movie to/from own watchlist;
-- Display user watchlist on his profile page (to do).
+- Display user watchlist on his profile page;
 - Change the website language;
 
 ## How to setup
