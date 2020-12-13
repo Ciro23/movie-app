@@ -8,9 +8,23 @@ class UserController extends Controller {
     * @param string $username
     */
     public function index($username) {
-        // fetches data from user model
-        $model = $this->model("user");
-        $data['username'] = $username;
+        // creates the user model
+        $userModel = $this->model("user");
+
+        $data = null;
+
+        // checks if the user exists, otherwise shows the 404 page
+        if ($userModel->doesUserExists($username, "BINARY")) {
+            // gets user data
+            $data['username'] = $username;
+            $watchlist = $userModel->getUserWatchlist($username);
+
+            // creates the movie model
+            $movieModel = $this->model("movie");
+
+            // gets movies details
+            $data['watchlist'] = $movieModel->getMoviesFromWatchlist($watchlist);
+        }
 
         $this->view("user", $data);
     }
