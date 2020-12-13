@@ -172,6 +172,7 @@ html {
 .cast {
   background-color: white;
   padding-bottom: 20rem;
+  border-radius: 0 0 0.8rem 0.8rem;
 }
 
 .cast h2 {
