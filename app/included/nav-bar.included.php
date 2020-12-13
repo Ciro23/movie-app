@@ -3,7 +3,7 @@
         <a href="/">
             <img src="/assets/icons/logo.icon.png">
         </a>
-        <input class="search-bar" type="text" placeholder="<?= $lang['search-bar'] ?>">
+        <input class="search-bar" type="text" placeholder="<?= $lang['search_bar'] ?>">
         <span>
             <?php
             if (isset($_SESSION['username'])) {
