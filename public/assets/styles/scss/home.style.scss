@@ -1,10 +1,6 @@
 @import "common.style.scss";
 @import "movie-grid.style.scss";
 
-html {
-    background: linear-gradient($background, $secondBackground);
-}
-
 .movies-container {
     max-width: 114rem;
     margin: 0 auto;

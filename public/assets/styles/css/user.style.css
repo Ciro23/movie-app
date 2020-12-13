@@ -9,6 +9,8 @@
 html {
   font-size: 10px;
   min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#121212), to(#1f1f1f));
+  background: linear-gradient(#121212, #1f1f1f);
 }
 
 .vote {
@@ -76,11 +78,6 @@ html {
   width: 3.2rem;
   height: 3.2rem;
   font-size: 1.4rem;
-}
-
-html {
-  background: -webkit-gradient(linear, left top, left bottom, from(#121212), to(#1f1f1f));
-  background: linear-gradient(#121212, #1f1f1f);
 }
 
 .user-container {
