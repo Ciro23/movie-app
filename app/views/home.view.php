@@ -51,8 +51,8 @@
                 ?>
             </div>
 
-            <div class="filter">
-                <span class="filter-box page-filter">
+            <div class="page-filter">
+                <div class="filter-box">
                     <?php
                     // determines the base root of the url
                     if (isset($data['movie_filter'])) {
@@ -82,7 +82,7 @@
                         echo "<a href='/" . $base . $next . "'> > </a>";
                     }
                     ?>
-                </span>
+                </div>
             </div>
         </div>
     </body>
