@@ -10,7 +10,7 @@ class UserModel extends Model {
     * @return array|false, first on success, false otherwise
     */
     public function getUserWatchlist($username) {
-        $sql = "SELECT movie, addedOn FROM watchlist WHERE user = ?";
+        $sql = "SELECT movie, addedOn FROM watchlist WHERE user = ? ORDER BY addedOn DESC";
         if ($query = $this->executeStmt($sql, [$username])) {
             return $query->fetchAll(PDO::FETCH_ASSOC);
         }
