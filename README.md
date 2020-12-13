@@ -1,5 +1,5 @@
 # Movie App
-This is a simple web app to display all the movies from the TMDB API.
+This is a simple web app to display all the movies from the TMDB API.<br>
 It's created with the scope of learning the MVC pattern.
 
 ## Features
@@ -11,9 +11,9 @@ It's created with the scope of learning the MVC pattern.
 - Basic user signup/login;
 - Add/remove a movie to/from own watchlist;
 - Display user watchlist on his profile page;
-- Change the website language;
+- Change the website language.
 
 ## How to setup
 - Clone this repository to your website root folder;
 - Import the database tables with the database.sql file in /app/config/ into your database;
-- Rename the .env.example to .env and insert all your private data
+- Rename the .env.example to .env and insert all your private data.
