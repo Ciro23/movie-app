@@ -27,6 +27,12 @@ html {
   border-radius: 50%;
 }
 
+@media only screen and (max-width: 599px) {
+  html {
+    font-size: 2vw;
+  }
+}
+
 .movie-grid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,8 +84,9 @@ html {
 }
 
 .user-container {
-  max-width: 112rem;
+  max-width: 114rem;
   margin: 0 auto;
+  padding: 1rem;
   border-radius: 0.8rem;
   margin-top: 10rem;
   min-height: 30rem;
