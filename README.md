@@ -1,6 +1,7 @@
 # Movie App
 This is a simple web app to display all the movies from the TMDB API.<br>
 It's created with the scope of learning the MVC pattern.
+Live demo available at https://movie-app-demo.000webhostapp.com/
 
 ## Features
 - Display movies ordered by different filters (popular, now playing, top rated, upcoming);
