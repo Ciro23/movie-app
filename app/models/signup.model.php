@@ -117,7 +117,7 @@ class SignupModel extends Model {
         }
 
         if ($password != $repassword) {
-            return "passwords-do-not-match";
+            return "passwords-does-not-match";
         }
 
         return false;
