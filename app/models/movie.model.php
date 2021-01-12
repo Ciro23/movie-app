@@ -2,7 +2,7 @@
 
 class MovieModel extends Model {
 
-    /*
+    /**
     * checks if the image of a movie exists
     *
     * @param string $image, the image path
@@ -23,7 +23,7 @@ class MovieModel extends Model {
         return $_ENV['imageBaseUrl'] . $width . $image;
     }
 
-    /*
+    /**
     * returns a movie list sorted in different ways
     *
     * @param string $filter, the filter to select movies
@@ -58,7 +58,7 @@ class MovieModel extends Model {
         return $data;
     }
 
-    /*
+    /**
     * searches for movies
     *
     * @param string $filter, the filter to select movies
@@ -94,7 +94,7 @@ class MovieModel extends Model {
         return $data;
     }
 
-    /*
+    /**
     * returns details of a specific movie
     *
     * @param int $id, the movie id
@@ -130,7 +130,7 @@ class MovieModel extends Model {
         return $data;
     }
 
-    /*
+    /**
     * gets the movies details from the user watchlist
     *
     * @param array $watchlist, an array containing all the movies id
@@ -163,7 +163,7 @@ class MovieModel extends Model {
         return $data;
     }
 
-    /*
+    /**
     * adds a movie to the user watchlist
     *
     * @param int $id, the movie id
@@ -173,7 +173,7 @@ class MovieModel extends Model {
         $this->executeStmt($sql, [$id, $_SESSION['username']]);
     }
 
-    /*
+    /**
     * removes a movie from the user watchlist
     *
     * @param int $id, the movie id
@@ -183,7 +183,7 @@ class MovieModel extends Model {
         $this->executeStmt($sql, [$id, $_SESSION['username']]);
     }
 
-    /*
+    /**
     * checks if a movie is in the user watchlist
     *
     * @param int $id, the movie id
@@ -202,7 +202,7 @@ class MovieModel extends Model {
         return false;
     }
 
-    /*
+    /**
     * formats the date
     *
     * @param string $date
@@ -216,7 +216,7 @@ class MovieModel extends Model {
         return $date;
     }
 
-    /*
+    /**
     * formats the runtime
     *
     * @param string $runtime
@@ -230,7 +230,7 @@ class MovieModel extends Model {
         return $hrs . "h " . $mins . "m";
     }
 
-    /*
+    /**
     * formats the budget
     *
     * @param string $budget
@@ -251,7 +251,7 @@ class MovieModel extends Model {
         return strrev($budgetNew);
     }
 
-    /*
+    /**
     * gets the minimum page to display in the page selection menu
     *
     * @param int $page
@@ -266,7 +266,7 @@ class MovieModel extends Model {
         return $minPage;
     }
 
-    /*
+    /**
     * gets the maximum page to display in the page selection menu
     *
     * @param int $page
@@ -283,7 +283,7 @@ class MovieModel extends Model {
         return $maxPage;
     }
 
-    /*
+    /**
     * gets the cast and the crew details
     *
     * @param int $id, the movie id
@@ -302,7 +302,7 @@ class MovieModel extends Model {
         return json_decode($json, true);
     }
 
-    /*
+    /**
     * gets the director name
     *
     * @param array $crew

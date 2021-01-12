@@ -2,12 +2,12 @@
 
 class LoginModel extends Model {
 
-    /*
+    /**
     * @var array $feedbackNegative, saves the error and the username on failure
     */
     public $feedbackNegative;
 
-    /*
+    /**
     * perform the login action
     * @param $userModel
     *
@@ -52,14 +52,14 @@ class LoginModel extends Model {
         return true;
     }
 
-    /*
+    /**
     * destroys the current session
     */
     public function logout() {
         session_destroy();
     }
 
-    /*
+    /**
     * checks if the username is valid
     *
     * @param string $username
@@ -74,7 +74,7 @@ class LoginModel extends Model {
         return false;
     }
 
-    /*
+    /**
     * checks if the password is valid
     *
     * @param string $username

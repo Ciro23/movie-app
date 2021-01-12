@@ -2,7 +2,7 @@
 
 class HomeController extends Controller {
 
-    /*
+    /**
     * shows the homepage
     *
     * @param string $filter, the movie filter (popular, top rated...)
@@ -16,7 +16,7 @@ class HomeController extends Controller {
         $this->view("home", $data);
     }
 
-    /*
+    /**
     * searches for movies
     *
     * @param string $query, the search query

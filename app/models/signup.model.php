@@ -2,7 +2,7 @@
 
 class SignupModel extends Model {
 
-    /*
+    /**
     * @var array $feedbackNegative, saves the error and the username on failure
     */
     public $feedbackNegative;
@@ -18,7 +18,7 @@ class SignupModel extends Model {
         return ucfirst(str_replace("-", " ", $error));
     }
 
-    /*
+    /**
     * perform the signup action
     * @param $userModel
     *
@@ -68,7 +68,7 @@ class SignupModel extends Model {
         return false;
     }
 
-    /*
+    /**
     * checks if the username is valid
     *
     * @param string $username
@@ -95,7 +95,7 @@ class SignupModel extends Model {
         return false;
     }
 
-    /*
+    /**
     * checks if the password is valid
     *
     * @param string $password
@@ -123,7 +123,7 @@ class SignupModel extends Model {
         return false;
     }
 
-    /*
+    /**
     * insert the new user to the database
     *
     * @param string $username

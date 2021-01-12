@@ -2,7 +2,7 @@
 
 class SignupController extends Controller {
 
-    /*
+    /**
     * shows the signup form page
     */
     public function index() {
@@ -20,7 +20,7 @@ class SignupController extends Controller {
         }
     }
 
-    /*
+    /**
     * the signup action
     */
     public function signup() {

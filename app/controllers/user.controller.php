@@ -2,7 +2,7 @@
 
 class UserController extends Controller {
 
-    /*
+    /**
     * shows the user profile page
     *
     * @param string $username

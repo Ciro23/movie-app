@@ -2,7 +2,7 @@
 
 class MovieController extends Controller {
 
-    /*
+    /**
     * shows the movie page
     *
     * @param int $id, the movie id
@@ -15,7 +15,7 @@ class MovieController extends Controller {
         $this->view("movie", $data);
     }
 
-    /*
+    /**
     * adds a movie to the user watchlist
     *
     * @param int $id, the movie id
@@ -31,7 +31,7 @@ class MovieController extends Controller {
         }
     }
 
-    /*
+    /**
     * removes a movie from the user watchlist
     *
     * @param int $id, the movie id

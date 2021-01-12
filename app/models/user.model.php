@@ -2,7 +2,7 @@
 
 class UserModel extends Model {
 
-    /*
+    /**
     * gets the user watchlist
     *
     * @param string $username
@@ -17,7 +17,7 @@ class UserModel extends Model {
         return !$this->error = true;
     }
 
-    /*
+    /**
     * checks if the user exists
     *
     * @param string $username
@@ -36,7 +36,7 @@ class UserModel extends Model {
         return !$this->error = true;
     }
 
-    /*
+    /**
     * gets the user password
     *
     * @param string $username

@@ -2,7 +2,7 @@
 
 class LoginController extends Controller {
 
-    /*
+    /**
     * shows the login form page
     */
     public function index() {
@@ -20,7 +20,7 @@ class LoginController extends Controller {
         }
     }
 
-    /*
+    /**
     * the login action
     */
     public function login() {
@@ -33,7 +33,7 @@ class LoginController extends Controller {
         }
     }
 
-    /*
+    /**
     * the logout action
     */
     public function logout() {
