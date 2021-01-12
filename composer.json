@@ -11,7 +11,8 @@
 
     "require": {
         "vlucas/phpdotenv": "^5.1",
-        "nikic/fast-route": "^1.3"
+        "nikic/fast-route": "^1.3",
+        "ciro23/mvc-framework": "dev-master"
     },
 
     "autoload": {

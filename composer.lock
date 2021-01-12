@@ -4,8 +4,42 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bffbcf381e048e0e64c2e2f4cba0bc92",
+    "content-hash": "43b7a87a3ffdf1d492b1edf02b27ab09",
     "packages": [
+        {
+            "name": "ciro23/mvc-framework",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Ciro23/mvc-framework.git",
+                "reference": "a7ec1b1e0b5d56a287cf520d167ae4872304953e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Ciro23/mvc-framework/zipball/a7ec1b1e0b5d56a287cf520d167ae4872304953e",
+                "reference": "a7ec1b1e0b5d56a287cf520d167ae4872304953e",
+                "shasum": ""
+            },
+            "require": {
+                "vlucas/phpdotenv": "^5.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ciro Sorre"
+                }
+            ],
+            "time": "2021-01-12T20:09:52+00:00"
+        },
         {
             "name": "graham-campbell/result-type",
             "version": "v1.0.1",
@@ -492,7 +526,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "ciro23/mvc-framework": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
