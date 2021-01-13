@@ -1,6 +1,6 @@
 <?php
 
-class MovieModel extends Model {
+class MovieModel extends Mvc\Model {
 
     /**
     * checks if the image of a movie exists

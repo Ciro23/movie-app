@@ -1,6 +1,6 @@
 <?php
 
-class SignupController extends Controller {
+class SignupController extends Mvc\Controller {
 
     /**
     * shows the signup form page

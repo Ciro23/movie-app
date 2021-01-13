@@ -1,6 +1,6 @@
 <?php
 
-class MovieController extends Controller {
+class MovieController extends Mvc\Controller {
 
     /**
     * shows the movie page

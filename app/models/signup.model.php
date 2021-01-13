@@ -1,13 +1,13 @@
 <?php
 
-class SignupModel extends Model {
+class SignupModel extends Mvc\Model {
 
     /**
     * @var array $feedbackNegative, saves the error and the username on failure
     */
     public $feedbackNegative;
 
-    /*
+    /**
     * return a user readable formatted error
     *
     * @param string error

@@ -1,6 +1,6 @@
 <?php
 
-class LoginModel extends Model {
+class LoginModel extends Mvc\Model {
 
     /**
     * @var array $feedbackNegative, saves the error and the username on failure

@@ -1,6 +1,6 @@
 <?php
 
-class UserModel extends Model {
+class UserModel extends Mvc\Model {
 
     /**
     * gets the user watchlist
