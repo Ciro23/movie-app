@@ -5,9 +5,7 @@ if (isset($_POST['cast'])) {
     $_ENV = $_POST['env'];
 
     // re include all the needed classes
-    include_once __DIR__ . "/../core/dbh.php";
-    include_once __DIR__ . "/../core/model.php";
-    include_once __DIR__ . "/../models/movie.model.php";
+    require_once __DIR__ . "/../../vendor/autoload.php";
 } else {
     if (count($cast) >= 5) {
         $castLimit = 5;
