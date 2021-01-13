@@ -17,5 +17,5 @@ Live demo available at https://movie-app-demo.000webhostapp.com/
 ## How to setup
 - Clone this repository to your website root folder;
 - Import the database tables with the database.sql file in /app/config/ into your database;
-- Rename the .env.example to .env and insert all your private data.
-- This app is made with the [ciro23/mvc-framework library](https://github.com/Ciro23/mvc-framework), install it with: composer require ciro23/mvc-framework
+- Rename the .env.example to .env and insert all your private data;
+- This app is made with the [ciro23/mvc-framework library](https://github.com/Ciro23/mvc-framework), install it with: composer require ciro23/mvc-framework.
