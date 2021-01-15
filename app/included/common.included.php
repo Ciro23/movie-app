@@ -14,10 +14,12 @@
 <link rel="stylesheet" href="/public/assets/styles/css/footer.style.css">
 
 <?php
-$languages = ["En" => "us",
-              "It" => "it",
-              "Fr" => "fr",
-              "Es" => "es",
-              "De" => "de"];
+$languages = [
+    "En" => "us",
+    "It" => "it",
+    "Fr" => "fr",
+    "Es" => "es",
+    "De" => "de"
+];
 include_once __DIR__ . "/../views/languages/" . $_COOKIE['language'] . ".lang.php";
 ?>

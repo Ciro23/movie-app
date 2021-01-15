@@ -7,7 +7,7 @@
         <span>
             <?php
             if (isset($_SESSION['username'])) {
-                echo "<a href='/user/". $_SESSION['username'] . "'>" . $_SESSION['username'] . "</a>";
+                echo "<a href='/user/" . $_SESSION['username'] . "'>" . $_SESSION['username'] . "</a>";
             } else {
                 echo "<a href='/login'>Login</a>";
             }
@@ -30,19 +30,19 @@
 </div>
 
 <script>
-$(document).ready(function() {
-    $(".search-bar").bind("keypress", function(e) {
-        if (e.keyCode == 13) {
-            var query = $(this).val();
-            window.location.href = "/search/" + query;
-        }
-    });
+    $(document).ready(function() {
+        $(".search-bar").bind("keypress", function(e) {
+            if (e.keyCode == 13) {
+                var query = $(this).val();
+                window.location.href = "/search/" + query;
+            }
+        });
 
-    // saves the current language in the cookies and update the page
-    $(".languages").on("change", function() {
-        var language = $(this).val();
-        document.cookie = "language = " + language + "; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/";
-        location.reload();
+        // saves the current language in the cookies and update the page
+        $(".languages").on("change", function() {
+            var language = $(this).val();
+            document.cookie = "language = " + language + "; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/";
+            location.reload();
+        });
     });
-});
 </script>

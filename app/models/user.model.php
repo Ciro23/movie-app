@@ -3,12 +3,12 @@
 class UserModel extends Mvc\Model {
 
     /**
-    * gets the user watchlist
-    *
-    * @param string $username
-    *
-    * @return array|false, first on success, false otherwise
-    */
+     * gets the user watchlist
+     *
+     * @param string $username
+     *
+     * @return array|false, first on success, false otherwise
+     */
     public function getUserWatchlist($username) {
         $sql = "SELECT movie, addedOn FROM watchlist WHERE user = ? ORDER BY addedOn DESC";
         if ($query = $this->executeStmt($sql, [$username])) {
@@ -18,13 +18,13 @@ class UserModel extends Mvc\Model {
     }
 
     /**
-    * checks if the user exists
-    *
-    * @param string $username
-    * @param string $binary, if the query should be case sensitive
-    *
-    * @return bool, success status
-    */
+     * checks if the user exists
+     *
+     * @param string $username
+     * @param string $binary, if the query should be case sensitive
+     *
+     * @return bool, success status
+     */
     public function doesUserExists($username, $binary = "") {
         $sql = "SELECT COUNT(*) FROM user WHERE $binary username = ?";
         if ($query = $this->executeStmt($sql, [$username])) {
@@ -37,12 +37,12 @@ class UserModel extends Mvc\Model {
     }
 
     /**
-    * gets the user password
-    *
-    * @param string $username
-    *
-    * @return string|false, first on success, false otherwise
-    */
+     * gets the user password
+     *
+     * @param string $username
+     *
+     * @return string|false, first on success, false otherwise
+     */
     public function getUserPassword($username) {
         $sql = "SELECT password FROM user WHERE BINARY username = ?";
         if ($query = $this->executeStmt($sql, [$username])) {

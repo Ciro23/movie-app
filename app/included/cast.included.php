@@ -25,4 +25,3 @@ for ($i = 0; $i < $castLimit; $i++) {
     echo "<p class='character'>" . $cast[$i]['character'] . "</p>";
     echo "</div>";
 }
-?>

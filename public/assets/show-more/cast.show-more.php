@@ -4,5 +4,3 @@ if (isset($_POST['includeCheck'])) {
 } else {
     header("Location: /page-not-found");
 }
-
-?>

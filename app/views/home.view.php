@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= $_COOKIE['language']?>" dir="ltr">
+<html lang="<?= $_COOKIE['language'] ?>" dir="ltr">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,27 +12,28 @@
         <!-- movie grid animation script -->
         <script src="/assets/js-scripts/movie-grid.script.js"></script>
     </head>
+
     <body>
         <?php include_once __DIR__ . "/../included/nav-bar.included.php" ?>
 
         <div class="movies-container">
             <?php
             if (isset($data['movie_filter'])) {
-                    echo 
-                    "<span class='filter-box'>
-                        <a href='/popular'>" . $lang['movie_filter']['popular'] . "</a>
-                        <a href='/now_playing'>". $lang['movie_filter']['now_playing'] . "</a>
-                        <a href='/top_rated'>" . $lang['movie_filter']['top_rated'] . "</a>
-                        <a href='/upcoming'>" . $lang['movie_filter']['upcoming'] . "</a>
-                    </span>";
+                echo
+                "<span class='filter-box'>
+                            <a href='/popular'>" . $lang['movie_filter']['popular'] . "</a>
+                            <a href='/now_playing'>" . $lang['movie_filter']['now_playing'] . "</a>
+                            <a href='/top_rated'>" . $lang['movie_filter']['top_rated'] . "</a>
+                            <a href='/upcoming'>" . $lang['movie_filter']['upcoming'] . "</a>
+                        </span>";
+            } else {
+                if ($data['total_results'] == 1) {
+                    echo "<h2 class='total-results'>" . $lang['total_results']['there_is'] . $data['total_results'] . $lang['total_results']["result_for"] . "\"" . $data['query'] . "\"</h2>";
                 } else {
-                    if ($data['total_results'] == 1) {
-                        echo "<h2 class='total-results'>" . $lang['total_results']['there_is'] . $data['total_results'] . $lang['total_results']["result_for"] . "\"" . $data['query'] . "\"</h2>";
-                    } else {
-                        echo "<h2 class='total-results'>" . $lang['total_results']['there_are'] . $data['total_results'] . $lang['total_results']["results_for"] . "\"" . $data['query'] . "\"</h2>";
-                    }
+                    echo "<h2 class='total-results'>" . $lang['total_results']['there_are'] . $data['total_results'] . $lang['total_results']["results_for"] . "\"" . $data['query'] . "\"</h2>";
                 }
-                ?>
+            }
+            ?>
 
             <div class='movie-grid'>
                 <?php

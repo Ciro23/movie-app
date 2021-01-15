@@ -3,27 +3,27 @@
 class SignupModel extends Mvc\Model {
 
     /**
-    * @var array $feedbackNegative, saves the error and the username on failure
-    */
+     * @var array $feedbackNegative, saves the error and the username on failure
+     */
     public $feedbackNegative;
 
     /**
-    * return a user readable formatted error
-    *
-    * @param string error
-    *
-    * @return string, the formatted error
-    */
+     * return a user readable formatted error
+     *
+     * @param string error
+     *
+     * @return string, the formatted error
+     */
     public static function formatError($error) {
         return ucfirst(str_replace("-", " ", $error));
     }
 
     /**
-    * perform the signup action
-    * @param $userModel
-    *
-    * @return bool, success status
-    */
+     * perform the signup action
+     * @param $userModel
+     *
+     * @return bool, success status
+     */
     public function signup($userModel) {
         // gets $username, $password and $repassword
         extract($_POST);
@@ -37,11 +37,9 @@ class SignupModel extends Mvc\Model {
         // validates username, checks if the username is already taken and validates password
         if ($error = $this->validateUsername($username)) {
             $return = true;
-
         } else if ($userModel->doesUserExists($username)) {
             $error = "username-is-already-taken";
             $return = true;
-
         } else if ($error = $this->validatePassword($password, $repassword)) {
             $return = true;
         }
@@ -69,12 +67,12 @@ class SignupModel extends Mvc\Model {
     }
 
     /**
-    * checks if the username is valid
-    *
-    * @param string $username
-    *
-    * @return string|false, first on error, false otherwise
-    */
+     * checks if the username is valid
+     *
+     * @param string $username
+     *
+     * @return string|false, first on error, false otherwise
+     */
     private function validateUsername($username) {
         if (empty($username)) {
             return "username-cannot-be-empty";
@@ -96,18 +94,18 @@ class SignupModel extends Mvc\Model {
     }
 
     /**
-    * checks if the password is valid
-    *
-    * @param string $password
-    * @param string $repassword
-    *
-    * @return string|false, first on error, false otherwise
-    */
+     * checks if the password is valid
+     *
+     * @param string $password
+     * @param string $repassword
+     *
+     * @return string|false, first on error, false otherwise
+     */
     private function validatePassword($password, $repassword) {
         if (empty($password)) {
             return "password-cannot-be-empty";
         }
-        
+
         if (strlen($password) < 6) {
             return "password-must-be-longer-than-6-characters";
         }
@@ -124,13 +122,13 @@ class SignupModel extends Mvc\Model {
     }
 
     /**
-    * insert the new user to the database
-    *
-    * @param string $username
-    * @param string $password
-    *
-    * @return bool, success status
-    */
+     * insert the new user to the database
+     *
+     * @param string $username
+     * @param string $password
+     *
+     * @return bool, success status
+     */
     private function insertUserToDb($username, $password) {
         $sql = "INSERT INTO user (username, password) VALUES (?, ?)";
         if ($this->executeStmt($sql, [$username, $password])) {

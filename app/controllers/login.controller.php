@@ -3,8 +3,8 @@
 class LoginController extends Mvc\Controller {
 
     /**
-    * shows the login form page
-    */
+     * shows the login form page
+     */
     public function index() {
         if (!isset($_SESSION['username'])) {
             // gets the error and the username from the url query
@@ -21,8 +21,8 @@ class LoginController extends Mvc\Controller {
     }
 
     /**
-    * the login action
-    */
+     * the login action
+     */
     public function login() {
         $loginModel = $this->model("login");
 
@@ -34,8 +34,8 @@ class LoginController extends Mvc\Controller {
     }
 
     /**
-    * the logout action
-    */
+     * the logout action
+     */
     public function logout() {
         if (isset($_SESSION['username'])) {
             $loginModel = $this->model("login");

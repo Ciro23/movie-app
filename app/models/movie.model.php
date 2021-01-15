@@ -3,19 +3,19 @@
 class MovieModel extends Mvc\Model {
 
     /**
-    * checks if the image of a movie exists
-    *
-    * @param string $image, the image path
-    * @param string $width, the image width (original, w200...)
-    * @param string $replace, if the image must be replaced with a default one in case of missing
-    *
-    * @return string, the image path
-    */
+     * checks if the image of a movie exists
+     *
+     * @param string $image, the image path
+     * @param string $width, the image width (original, w200...)
+     * @param string $replace, if the image must be replaced with a default one in case of missing
+     *
+     * @return string, the image path
+     */
     public static function doesMovieImageExists($image, $width, $replace = "yes") {
         if ($replace == "yes") {
             $replace = $_ENV['defaultImgPath'];
         }
-        
+
         if ($image == null) {
             return $replace;
         }
@@ -24,28 +24,28 @@ class MovieModel extends Mvc\Model {
     }
 
     /**
-    * returns a movie list sorted in different ways
-    *
-    * @param string $filter, the filter to select movies
-    * @param string $page
-    *
-    * @return array, containing all the data
-    */
+     * returns a movie list sorted in different ways
+     *
+     * @param string $filter, the filter to select movies
+     * @param string $page
+     *
+     * @return array, containing all the data
+     */
     public function getMovieList($filter, $page) {
         // get the json file into a string variable
         $tmdbUrl = "https://api.themoviedb.org/3/movie/"
-        . $filter
-        . "?api_key="
-        . $_ENV['apiKey']
-        . "&language="
-        . $_COOKIE['language']
-        . "&page="
-        . $page
-        . "&region="
-        . $_COOKIE['language'];
+            . $filter
+            . "?api_key="
+            . $_ENV['apiKey']
+            . "&language="
+            . $_COOKIE['language']
+            . "&page="
+            . $page
+            . "&region="
+            . $_COOKIE['language'];
 
         $json = @file_get_contents($tmdbUrl);
-        
+
         if ($data = json_decode($json, true)) {
             // saves the current movie filter
             $data['movie_filter'] = $filter;
@@ -59,27 +59,27 @@ class MovieModel extends Mvc\Model {
     }
 
     /**
-    * searches for movies
-    *
-    * @param string $filter, the filter to select movies
-    * @param string $page
-    *
-    * @return array, containing all the data
-    */
+     * searches for movies
+     *
+     * @param string $filter, the filter to select movies
+     * @param string $page
+     *
+     * @return array, containing all the data
+     */
     public function searchMovie($query, $page) {
         $tmdbUrl = "https://api.themoviedb.org/3/search/movie?api_key="
-        . $_ENV['apiKey']
-        . "&language="
-        . $_COOKIE['language']
-        . "&query="
-        . $query
-        . "&page="
-        . $page
-        . "&region="
-        . $_COOKIE['language'];
-        
+            . $_ENV['apiKey']
+            . "&language="
+            . $_COOKIE['language']
+            . "&query="
+            . $query
+            . "&page="
+            . $page
+            . "&region="
+            . $_COOKIE['language'];
+
         $json = @file_get_contents($tmdbUrl);
-        
+
         if ($data = json_decode($json, true)) {
             // formats and saves the current query
             $query = str_replace("%20", " ", $query);
@@ -95,20 +95,20 @@ class MovieModel extends Mvc\Model {
     }
 
     /**
-    * returns details of a specific movie
-    *
-    * @param int $id, the movie id
-    *
-    * @return array, containing all the data
-    */
+     * returns details of a specific movie
+     *
+     * @param int $id, the movie id
+     *
+     * @return array, containing all the data
+     */
     public function getMovieDetails($id) {
         // get the json file into a string variable
         $tmdbUrl = "https://api.themoviedb.org/3/movie/"
-        . $id
-        . "?api_key="
-        . $_ENV['apiKey']
-        . "&language="
-        . $_COOKIE['language'];
+            . $id
+            . "?api_key="
+            . $_ENV['apiKey']
+            . "&language="
+            . $_COOKIE['language'];
 
         $json = @file_get_contents($tmdbUrl);
 
@@ -126,28 +126,28 @@ class MovieModel extends Mvc\Model {
             // checks if the movie is in the watchlist of the current user
             $data['isMovieInWatchlist'] = $this->isInWatchlist($id);
         }
-        
+
         return $data;
     }
 
     /**
-    * gets the movies details from the user watchlist
-    *
-    * @param array $watchlist, an array containing all the movies id
-    *
-    * @return array
-    */
+     * gets the movies details from the user watchlist
+     *
+     * @param array $watchlist, an array containing all the movies id
+     *
+     * @return array
+     */
     public function getMoviesFromWatchlist($watchlist) {
         $data = [];
         if (count($watchlist)) {
-            foreach($watchlist as $index => $movie) {
+            foreach ($watchlist as $index => $movie) {
                 // get the json file into a string variable
                 $tmdbUrl = "https://api.themoviedb.org/3/movie/"
-                . $movie['movie']
-                . "?api_key="
-                . $_ENV['apiKey']
-                . "&language="
-                . $_COOKIE['language'];
+                    . $movie['movie']
+                    . "?api_key="
+                    . $_ENV['apiKey']
+                    . "&language="
+                    . $_COOKIE['language'];
 
                 $json = @file_get_contents($tmdbUrl);
 
@@ -164,32 +164,32 @@ class MovieModel extends Mvc\Model {
     }
 
     /**
-    * adds a movie to the user watchlist
-    *
-    * @param int $id, the movie id
-    */
+     * adds a movie to the user watchlist
+     *
+     * @param int $id, the movie id
+     */
     public function addToWatchlist($id) {
         $sql = "INSERT INTO watchlist (movie, user) VALUES (?, ?)";
         $this->executeStmt($sql, [$id, $_SESSION['username']]);
     }
 
     /**
-    * removes a movie from the user watchlist
-    *
-    * @param int $id, the movie id
-    */
+     * removes a movie from the user watchlist
+     *
+     * @param int $id, the movie id
+     */
     public function removeFromWatchlist($id) {
         $sql = "DELETE FROM watchlist WHERE movie = ? AND user = ?";
         $this->executeStmt($sql, [$id, $_SESSION['username']]);
     }
 
     /**
-    * checks if a movie is in the user watchlist
-    *
-    * @param int $id, the movie id
-    *
-    * @return bool, success status
-    */
+     * checks if a movie is in the user watchlist
+     *
+     * @param int $id, the movie id
+     *
+     * @return bool, success status
+     */
     private function isInWatchlist($id) {
         if (isset($_SESSION['username'])) {
             $sql = "SELECT COUNT(*) FROM watchlist WHERE movie = ? AND user = ?";
@@ -203,12 +203,12 @@ class MovieModel extends Mvc\Model {
     }
 
     /**
-    * formats the date
-    *
-    * @param string $date
-    *
-    * @return string, the formatted date
-    */
+     * formats the date
+     *
+     * @param string $date
+     *
+     * @return string, the formatted date
+     */
     private function formatDate($date) {
         $date = date_create($date);
         $date = date_format($date, "d/m/Y");
@@ -217,12 +217,12 @@ class MovieModel extends Mvc\Model {
     }
 
     /**
-    * formats the runtime
-    *
-    * @param string $runtime
-    *
-    * @return string, the formatted runtime
-    */
+     * formats the runtime
+     *
+     * @param string $runtime
+     *
+     * @return string, the formatted runtime
+     */
     private function formatRuntime($runtime) {
         $hrs = floor($runtime / 60);
         $mins = $runtime - $hrs * 60;
@@ -231,12 +231,12 @@ class MovieModel extends Mvc\Model {
     }
 
     /**
-    * formats the budget
-    *
-    * @param string $budget
-    *
-    * @return string, the formatted budget
-    */
+     * formats the budget
+     *
+     * @param string $budget
+     *
+     * @return string, the formatted budget
+     */
     private function formatBudget($budget) {
         $budget = strval($budget);
         $budgetNew = "";
@@ -252,12 +252,12 @@ class MovieModel extends Mvc\Model {
     }
 
     /**
-    * gets the minimum page to display in the page selection menu
-    *
-    * @param int $page
-    *
-    * @return int, the minimum page
-    */
+     * gets the minimum page to display in the page selection menu
+     *
+     * @param int $page
+     *
+     * @return int, the minimum page
+     */
     private function getMinPage($page) {
         for ($i = $page; $i >= $page - 3 && $i > 0; $i--) {
             $minPage = $i;
@@ -267,13 +267,13 @@ class MovieModel extends Mvc\Model {
     }
 
     /**
-    * gets the maximum page to display in the page selection menu
-    *
-    * @param int $page
-    * @param int $total_pages
-    *
-    * @return int, the maximum page
-    */
+     * gets the maximum page to display in the page selection menu
+     *
+     * @param int $page
+     * @param int $total_pages
+     *
+     * @return int, the maximum page
+     */
     private function getMaxPage($page, $total_pages) {
         $maxPage = 0;
         for ($i = $page; $i <= $page + 3 && $maxPage < $total_pages; $i++) {
@@ -284,31 +284,31 @@ class MovieModel extends Mvc\Model {
     }
 
     /**
-    * gets the cast and the crew details
-    *
-    * @param int $id, the movie id
-    *
-    * @return array, containing all the cast and crew data
-    */
+     * gets the cast and the crew details
+     *
+     * @param int $id, the movie id
+     *
+     * @return array, containing all the cast and crew data
+     */
     private function getCredits($id) {
         // get the json file into a string variable
         $tmdbUrl = "https://api.themoviedb.org/3/movie/"
-        . $id
-        . "/credits?api_key="
-        . $_ENV['apiKey'];
-        
+            . $id
+            . "/credits?api_key="
+            . $_ENV['apiKey'];
+
         $json = @file_get_contents($tmdbUrl);
 
         return json_decode($json, true);
     }
 
     /**
-    * gets the director name
-    *
-    * @param array $crew
-    *
-    * @return string, the director name
-    */
+     * gets the director name
+     *
+     * @param array $crew
+     *
+     * @return string, the director name
+     */
     private function getDirector($crew) {
         for ($i = 0; $i < count($crew); $i++) {
             if ($crew[$i]['job'] == "Director") {

@@ -1,6 +1,6 @@
 <?php $imgPath = MovieModel::doesMovieImageExists($data['backdrop_path'], "original", "") ?>
 <!DOCTYPE html>
-<html lang="<?= $_COOKIE['language']?>" dir="ltr" style="background-image: url(<?= $imgPath ?>)">
+<html lang="<?= $_COOKIE['language'] ?>" dir="ltr" style="background-image: url(<?= $imgPath ?>)">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,29 +12,30 @@
 
         <!-- jQuery scripts -->
         <script>
-        $(document).ready(function() {
-            var cast = <?= json_encode($data['cast']); ?>;
-            // shows all the cast
-            $(".show-all-cast-btn").on("click", function() {
-                var env = <?= json_encode($_ENV); ?>;
+            $(document).ready(function() {
+                var cast = <?= json_encode($data['cast']); ?>;
+                // shows all the cast
+                $(".show-all-cast-btn").on("click", function() {
+                    var env = <?= json_encode($_ENV); ?>;
 
-                $(this).css("display", "none");
-                $(".cast-grid").load("/assets/show-more/cast.show-more.php", {
-                    cast,
-                    env,
-                    includeCheck: true,
+                    $(this).css("display", "none");
+                    $(".cast-grid").load("/assets/show-more/cast.show-more.php", {
+                        cast,
+                        env,
+                        includeCheck: true,
+                    });
                 });
-            });
 
-            if (cast.length <= 5) {
-                $(".show-all-cast-btn").css("display", "none");
-            }
-        });
+                if (cast.length <= 5) {
+                    $(".show-all-cast-btn").css("display", "none");
+                }
+            });
         </script>
     </head>
+
     <body>
         <?php include_once __DIR__ . "/../included/nav-bar.included.php" ?>
-        
+
         <div class="movie-container">
             <div class="movie-details">
 
@@ -70,7 +71,7 @@
                     for ($i = 0; $i < count($data['genres']); $i++) {
                         echo "<p>" . $data['genres'][$i]['name'] . "</p>";
                     }
-                    echo "</div>";         
+                    echo "</div>";
                     ?>
                 </div>
             </div>

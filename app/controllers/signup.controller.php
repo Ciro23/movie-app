@@ -3,8 +3,8 @@
 class SignupController extends Mvc\Controller {
 
     /**
-    * shows the signup form page
-    */
+     * shows the signup form page
+     */
     public function index() {
         if (!isset($_SESSION['username'])) {
             // gets the error and the username from the url query
@@ -21,8 +21,8 @@ class SignupController extends Mvc\Controller {
     }
 
     /**
-    * the signup action
-    */
+     * the signup action
+     */
     public function signup() {
         $signupModel = $this->model("signup");
 

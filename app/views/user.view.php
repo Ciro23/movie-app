@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= $_COOKIE['language']?>" dir="ltr">
+<html lang="<?= $_COOKIE['language'] ?>" dir="ltr">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,7 @@
         <!-- movie grid animation script -->
         <script src="/assets/js-scripts/movie-grid.script.js"></script>
     </head>
+
     <body>
         <?php include_once __DIR__ . "/../included/nav-bar.included.php" ?>
 
@@ -27,12 +28,12 @@
             <div class="movie-grid">
                 <?php
                 if (count($data['watchlist'])) {
-                    foreach($data['watchlist'] as $index => $movie) {
+                    foreach ($data['watchlist'] as $index => $movie) {
                         echo "<a href='/movie/" . $movie['id'] . "' class='movie'>";
                         echo "<div>";
-    
+
                         $imgPath = MovieModel::doesMovieImageExists($movie['poster_path'], "w200");
-    
+
                         echo "<img src='$imgPath'>";
                         echo "<p class='title'>" . $movie['title'] . "</p>";
                         echo "<span class='vote'>" . $movie['vote_average'] . "</span>";

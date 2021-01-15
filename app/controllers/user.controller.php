@@ -3,10 +3,10 @@
 class UserController extends Mvc\Controller {
 
     /**
-    * shows the user profile page
-    *
-    * @param string $username
-    */
+     * shows the user profile page
+     *
+     * @param string $username
+     */
     public function index($username) {
         // creates the user model
         $userModel = $this->model("user");

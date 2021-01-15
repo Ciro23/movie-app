@@ -34,10 +34,10 @@ switch ($routeInfo[0]) {
     case FastRoute\Dispatcher::FOUND:
         $handler = $routeInfo[1];
         $vars = $routeInfo[2];
-        
+
         // gets the controller and the method
         list($controller, $method) = explode("/", $handler);
-        
+
         // makes the sort popular if no one is selected
         if (!isset($vars['sort']) && $method == "index") {
             $vars['sort'] = "popular";
@@ -47,7 +47,7 @@ switch ($routeInfo[0]) {
         if (!isset($vars['page'])) {
             $vars['page'] = "1";
         }
-        
+
         break;
 }
 
