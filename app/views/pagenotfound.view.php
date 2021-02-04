@@ -8,7 +8,7 @@
         <?php include_once __DIR__ . "/../included/common.included.php" ?>
         <link rel="stylesheet" href="/assets/styles/css/page-not-found.style.css">
 
-        <title><?= $lang['page_not_found'] ?> - MVC</title>
+        <title><?= $lang['page_not_found'] ?> - Movie App</title>
     </head>
 
     <body>
