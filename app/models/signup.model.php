@@ -20,6 +20,7 @@ class SignupModel extends Mvc\Model {
 
     /**
      * perform the signup action
+     *
      * @param $userModel
      *
      * @return bool, success status
