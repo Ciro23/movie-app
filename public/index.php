@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 // composer autoload
 require_once __DIR__ . "/../vendor/autoload.php";
 
@@ -11,8 +13,6 @@ $dotenv->load();
 if (!isset($_COOKIE['language'])) {
     $_COOKIE['language'] = "us";
 }
-
-session_start();
 
 // includes the custom routes
 require_once __DIR__ . "/../app/core/routes.php";
