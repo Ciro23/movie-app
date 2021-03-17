@@ -24,9 +24,9 @@ class LoginModel extends Mvc\Model {
         $return = false;
 
         // validates username, checks if the user exists and validates password
-        if ($error = $this->usernameValidate($username)) {
+        if ($error = $this->validateUsername($username)) {
             $return = true;
-        } else if ($error = $this->passwordValidate($password)) {
+        } else if ($error = $this->validatePassword($password)) {
             $return = true;
         } else if (!$userModel->doesUserExists($username) || !password_verify($password, $userModel->getUserPassword($username))) {
             if ($userModel->error) {
@@ -64,7 +64,7 @@ class LoginModel extends Mvc\Model {
      *
      * @return string|false, first on error, false otherwise
      */
-    private function usernameValidate($username) {
+    private function validateUsername($username) {
         if (empty($username)) {
             return "username-cannot-be-empty";
         }
@@ -79,7 +79,7 @@ class LoginModel extends Mvc\Model {
      *
      * @return string|false, first on error, false otherwise
      */
-    private function passwordValidate($password) {
+    private function validatePassword($password) {
         if (empty($password)) {
             return "password-cannot-be-empty";
         }
