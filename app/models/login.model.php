@@ -75,7 +75,7 @@ class LoginModel extends Mvc\Model {
     /**
      * checks if the password is valid
      *
-     * @param string $username
+     * @param string $password
      *
      * @return string|false, first on error, false otherwise
      */
