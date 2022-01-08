@@ -1,55 +1,37 @@
 <?php
 
-session_start();
+// Path to the front controller (this file)
+define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
 
-// composer autoload
-require_once __DIR__ . "/../vendor/autoload.php";
+/*
+ *---------------------------------------------------------------
+ * BOOTSTRAP THE APPLICATION
+ *---------------------------------------------------------------
+ * This process sets up the path constants, loads and registers
+ * our autoloader, along with Composer's, loads our constants
+ * and fires up an environment-specific bootstrapping.
+ */
 
-// saves the env vars in the $_ENV superglobal
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../app/config/");
-$dotenv->load();
+// Ensure the current directory is pointing to the front controller's directory
+chdir(__DIR__);
 
-// sets the default language if no one is selected
-if (!isset($_COOKIE['language'])) {
-    $_COOKIE['language'] = "us";
-}
+// Load our paths config file
+// This is the line that might need to be changed, depending on your folder structure.
+$pathsConfig = FCPATH . '../app/Config/Paths.php';
+// ^^^ Change this if you move your application folder
+require realpath($pathsConfig) ?: $pathsConfig;
 
-// includes the custom routes
-require_once __DIR__ . "/../app/core/routes.php";
+$paths = new Config\Paths();
 
-// gets the current route
-$httpMethod = $_SERVER['REQUEST_METHOD'];
-$uri = $_SERVER['REQUEST_URI'];
-$routeInfo = $dispatcher->dispatch($httpMethod, $uri);
+// Location of the framework bootstrap file.
+$bootstrap = rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'bootstrap.php';
+$app       = require realpath($bootstrap) ?: $bootstrap;
 
-switch ($routeInfo[0]) {
-    case FastRoute\Dispatcher::NOT_FOUND:
-
-    case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
-        $controller = "PageNotFoundController";
-        $method = "index";
-        $vars = [];
-        break;
-
-    case FastRoute\Dispatcher::FOUND:
-        $handler = $routeInfo[1];
-        $vars = $routeInfo[2];
-
-        // gets the controller and the method
-        list($controller, $method) = explode("/", $handler);
-
-        // makes the sort popular if no one is selected
-        if (!isset($vars['sort']) && $method == "index") {
-            $vars['sort'] = "popular";
-        }
-
-        // makes the page 1 as the default if no one is selected
-        if (!isset($vars['page'])) {
-            $vars['page'] = "1";
-        }
-
-        break;
-}
-
-$controller = new $controller();
-call_user_func_array([$controller, $method], $vars);
+/*
+ *---------------------------------------------------------------
+ * LAUNCH THE APPLICATION
+ *---------------------------------------------------------------
+ * Now that everything is setup, it's time to actually fire
+ * up the engines and make this app do its thang.
+ */
+$app->run();
