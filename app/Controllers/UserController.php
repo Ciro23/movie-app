@@ -1,6 +1,8 @@
 <?php
 
-class UserController extends Mvc\Controller {
+use App\Controllers\BaseController;
+
+class UserController extends BaseController {
 
     /**
      * shows the user profile page

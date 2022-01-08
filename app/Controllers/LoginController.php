@@ -1,6 +1,8 @@
 <?php
 
-class LoginController extends Mvc\Controller {
+use App\Controllers\BaseController;
+
+class LoginController extends BaseController {
 
     /**
      * shows the login form page

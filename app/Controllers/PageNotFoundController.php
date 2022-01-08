@@ -1,6 +1,8 @@
 <?php
 
-class PageNotFoundController extends Mvc\Controller {
+use App\Controllers\BaseController;
+
+class PageNotFoundController extends BaseController {
 
     /**
      * shows the page not found page

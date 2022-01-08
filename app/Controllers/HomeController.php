@@ -1,6 +1,8 @@
 <?php
 
-class HomeController extends Mvc\Controller {
+use App\Controllers\BaseController;
+
+class HomeController extends BaseController {
 
     /**
      * shows the homepage
