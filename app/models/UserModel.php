@@ -1,6 +1,8 @@
 <?php
 
-class UserModel extends Mvc\Model {
+use CodeIgniter\Model;
+
+class UserModel extends Model {
 
     /**
      * gets the user watchlist

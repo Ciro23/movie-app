@@ -1,6 +1,8 @@
 <?php
 
-class MovieModel extends Mvc\Model {
+use CodeIgniter\Model;
+
+class MovieModel extends Model {
 
     /**
      * checks if the image of a movie exists

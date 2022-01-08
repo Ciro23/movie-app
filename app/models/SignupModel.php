@@ -1,6 +1,8 @@
 <?php
 
-class SignupModel extends Mvc\Model {
+use CodeIgniter\Model;
+
+class SignupModel extends Model {
 
     /**
      * @var array $feedbackNegative, saves the error and the username on failure

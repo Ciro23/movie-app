@@ -1,6 +1,8 @@
 <?php
 
-class LoginModel extends Mvc\Model {
+use CodeIgniter\Model;
+
+class LoginModel extends Model {
 
     /**
      * @var array $feedbackNegative, saves the error and the username on failure
