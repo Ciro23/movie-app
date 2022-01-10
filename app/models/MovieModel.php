@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 use CodeIgniter\Model;
 
 class MovieModel extends Model {
@@ -38,13 +40,9 @@ class MovieModel extends Model {
         $tmdbUrl = "https://api.themoviedb.org/3/movie/"
             . $filter
             . "?api_key="
-            . $_ENV['apiKey']
-            . "&language="
-            . $_COOKIE['language']
+            . "7e7244838cd02553e7353bc63ef2f3ad"
             . "&page="
-            . $page
-            . "&region="
-            . $_COOKIE['language'];
+            . $page;
 
         $json = @file_get_contents($tmdbUrl);
 
@@ -57,7 +55,7 @@ class MovieModel extends Model {
             $data['maxPage'] = $this->getMaxPage($data['page'], $data['total_pages']);
         }
 
-        return $data;
+        return $data ?? [];
     }
 
     /**
