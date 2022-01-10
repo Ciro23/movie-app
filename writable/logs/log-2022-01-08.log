@@ -1,0 +1,306 @@
+CRITICAL - 2022-01-08 03:26:10 --> Too few arguments to function App\Controllers\HomeController::index(), 0 passed in /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php on line 825 and exactly 2 expected
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index()
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:26:30 --> Too few arguments to function App\Controllers\HomeController::index(), 0 passed in /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php on line 825 and exactly 2 expected
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index()
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:26:31 --> Too few arguments to function App\Controllers\HomeController::index(), 0 passed in /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php on line 825 and exactly 2 expected
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index()
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:26:59 --> Too few arguments to function App\Controllers\HomeController::index(), 0 passed in /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php on line 825 and exactly 2 expected
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index()
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:27:20 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index()
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:28:46 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index()
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:30:57 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('$1', '$2')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:31:19 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('$1', '$2')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:32:14 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('popular', '1')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:32:50 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('popular', '1')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:32:57 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('popular', '1')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:33:55 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('popular', '1')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:33:56 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('', '')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:33:57 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('', '')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:35:49 --> syntax error, unexpected token "if"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-08 03:36:29 --> syntax error, unexpected token "if"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-08 03:36:30 --> syntax error, unexpected token "if"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-08 03:36:35 --> syntax error, unexpected token "if"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-08 03:36:37 --> syntax error, unexpected token "if"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-08 03:36:42 --> syntax error, unexpected token "if"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-08 03:36:50 --> syntax error, unexpected token "if"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-08 03:36:51 --> syntax error, unexpected token "if"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-08 03:36:53 --> syntax error, unexpected token "if"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-08 03:36:54 --> syntax error, unexpected token "if"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-08 03:36:58 --> syntax error, unexpected token "if"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-08 03:37:51 --> syntax error, unexpected token "if"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-08 03:37:53 --> syntax error, unexpected token "if"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-08 03:37:53 --> syntax error, unexpected token "if"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-08 03:41:36 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('popular', '')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:41:39 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('popular', '1', '')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:41:51 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('popular', '1', '')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:41:55 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('', '', '')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:42:17 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('', '', '')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:42:27 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('', '', '')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:42:30 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('', '', '')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:44:02 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('', '', '')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:44:06 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('popular', '')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:44:09 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('popular', '1', '')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:44:26 --> Class "MovieModel" not found
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('popular', '1', '')
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-08 03:44:45 --> Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Database/Database.php(56): CodeIgniter\Database\Database->initDriver('MySQLi', 'CodeIgniter\\Dat...', Array)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Database/Config.php(78): CodeIgniter\Database\Database->load(Array, 'default')
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Model.php(97): CodeIgniter\Database\Config::connect('default')
+#3 /var/www/html/movie-app/app/Controllers/HomeController.php(18): CodeIgniter\Model->__construct()
+#4 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('popular', '1', '')
+#5 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#6 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-01-08 03:45:25 --> Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Database/Database.php(56): CodeIgniter\Database\Database->initDriver('MySQLi', 'CodeIgniter\\Dat...', Array)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Database/Config.php(78): CodeIgniter\Database\Database->load(Array, 'default')
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Model.php(97): CodeIgniter\Database\Config::connect('default')
+#3 /var/www/html/movie-app/app/Controllers/HomeController.php(18): CodeIgniter\Model->__construct()
+#4 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('popular', '1', '')
+#5 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#6 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-01-08 03:45:38 --> Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+#0 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Database/Database.php(56): CodeIgniter\Database\Database->initDriver('MySQLi', 'CodeIgniter\\Dat...', Array)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Database/Config.php(78): CodeIgniter\Database\Database->load(Array, 'default')
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Model.php(97): CodeIgniter\Database\Config::connect('default')
+#3 /var/www/html/movie-app/app/Controllers/HomeController.php(18): CodeIgniter\Model->__construct()
+#4 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('popular', '1', '')
+#5 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#6 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-01-08 03:47:40 --> number_format(): Passing null to parameter #1 ($num) of type float is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'number_format()...', '/var/www/html/m...', 933)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Database/BaseConnection.php(933): number_format(NULL, 6)
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar/Collectors/Database.php(112): CodeIgniter\Database\BaseConnection->getConnectDuration()
+#3 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar/Collectors/BaseCollector.php(115): CodeIgniter\Debug\Toolbar\Collectors\Database->formatTimelineData()
+#4 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar/Collectors/BaseCollector.php(231): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->timelineData()
+#5 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar.php(90): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#6 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar.php(368): CodeIgniter\Debug\Toolbar->run(1641635259.9466, 0.4795, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#7 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Filters/DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#8 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Filters/Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#9 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('popular/1', 'after')
+#10 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-01-08 06:49:07 --> number_format(): Passing null to parameter #1 ($num) of type float is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'number_format()...', '/var/www/html/m...', 933)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Database/BaseConnection.php(933): number_format(NULL, 6)
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar/Collectors/Database.php(112): CodeIgniter\Database\BaseConnection->getConnectDuration()
+#3 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar/Collectors/BaseCollector.php(115): CodeIgniter\Debug\Toolbar\Collectors\Database->formatTimelineData()
+#4 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar/Collectors/BaseCollector.php(231): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->timelineData()
+#5 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar.php(90): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#6 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar.php(368): CodeIgniter\Debug\Toolbar->run(1641646147.4971, 0.3103, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#7 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Filters/DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#8 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Filters/Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#9 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('popular/1', 'after')
+#10 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-01-08 06:50:38 --> Undefined variable $data
+#0 /var/www/html/movie-app/app/Controllers/HomeController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/m...', 21)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('popular', '1', '')
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#3 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-08 06:50:43 --> Undefined variable $data
+#0 /var/www/html/movie-app/app/Controllers/HomeController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/m...', 21)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(825): App\Controllers\HomeController->index('popular', '1', '')
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#3 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-08 06:50:46 --> number_format(): Passing null to parameter #1 ($num) of type float is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'number_format()...', '/var/www/html/m...', 933)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Database/BaseConnection.php(933): number_format(NULL, 6)
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar/Collectors/Database.php(112): CodeIgniter\Database\BaseConnection->getConnectDuration()
+#3 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar/Collectors/BaseCollector.php(115): CodeIgniter\Debug\Toolbar\Collectors\Database->formatTimelineData()
+#4 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar/Collectors/BaseCollector.php(231): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->timelineData()
+#5 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar.php(90): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#6 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar.php(368): CodeIgniter\Debug\Toolbar->run(1641646246.5404, 0.1025, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#7 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Filters/DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#8 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Filters/Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#9 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('popular/1', 'after')
+#10 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}

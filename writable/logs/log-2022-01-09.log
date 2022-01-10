@@ -1,0 +1,14 @@
+CRITICAL - 2022-01-09 16:10:58 --> number_format(): Passing null to parameter #1 ($num) of type float is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'number_format()...', '/var/www/html/m...', 933)
+#1 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Database/BaseConnection.php(933): number_format(NULL, 6)
+#2 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar/Collectors/Database.php(112): CodeIgniter\Database\BaseConnection->getConnectDuration()
+#3 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar/Collectors/BaseCollector.php(115): CodeIgniter\Debug\Toolbar\Collectors\Database->formatTimelineData()
+#4 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar/Collectors/BaseCollector.php(231): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->timelineData()
+#5 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar.php(90): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#6 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Debug/Toolbar.php(368): CodeIgniter\Debug\Toolbar->run(1641766257.7902, 0.5099, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#7 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Filters/DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#8 /var/www/html/movie-app/vendor/codeigniter4/framework/system/Filters/Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#9 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('popular/1', 'after')
+#10 /var/www/html/movie-app/vendor/codeigniter4/framework/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/movie-app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}

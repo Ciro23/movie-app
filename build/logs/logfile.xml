@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="1" assertions="0" errors="1" warnings="0" failures="0" skipped="0" time="0.275605">
+    <testsuite name="App" tests="1" assertions="0" errors="1" warnings="0" failures="0" skipped="0" time="0.275605">
+      <testsuite name="Tests\MovieModelTest" file="/Users/tino/Docker/apache8.0/htdocs/movie-app/tests/MovieModelTest.php" tests="1" assertions="0" errors="1" warnings="0" failures="0" skipped="0" time="0.275605">
+        <testcase name="test_get_movie_list" class="Tests\MovieModelTest" classname="Tests.MovieModelTest" file="/Users/tino/Docker/apache8.0/htdocs/movie-app/tests/MovieModelTest.php" line="10" assertions="0" time="0.275605">
+          <error type="PHPUnit\Framework\RiskyTestError">Tests\MovieModelTest::test_get_movie_list
+This test did not perform any assertions
+
+/Users/tino/Docker/apache8.0/htdocs/movie-app/tests/MovieModelTest.php:10</error>
+          <system-out>/Users/tino/Docker/apache8.0/htdocs/movie-app/tests/MovieModelTest.php:14:
+array(7) {
+  'page' =&gt;
+  int(1)
+  'results' =&gt;
+  array(20) {
+    [0] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/1Rr5SrvHxMXHu5RjKpaMba8VTzi.jpg"
+      'genre_ids' =&gt;
+      array(3) {
+        ...
+      }
+      'id' =&gt;
+      int(634649)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(23) "Spider-Man: No Way Home"
+      'overview' =&gt;
+      string(258) "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man."
+      'popularity' =&gt;
+      double(8745.819)
+      'poster_path' =&gt;
+      string(32) "/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
+      'release_date' =&gt;
+      string(10) "2021-12-15"
+      'title' =&gt;
+      string(23) "Spider-Man: No Way Home"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(8.4)
+      'vote_count' =&gt;
+      int(3811)
+    }
+    [1] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/3G1Q5xF40HkUBJXxt2DQgQzKTp5.jpg"
+      'genre_ids' =&gt;
+      array(4) {
+        ...
+      }
+      'id' =&gt;
+      int(568124)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(7) "Encanto"
+      'overview' =&gt;
+      string(522) "The tale of an extraordinary family, the Madrigals, who live hidden in the mountains of Colombia, in a magical house, in a vibrant town, in a wondrous, charmed place called an Encanto. The magic of the Encanto has blessed every child in the family with a unique gift from super strength to the power to heal—every child except one, Mirabel. But when she discovers that the magic surrounding the Encanto is in danger, Mirabel decides that she, the only ordinary Madrigal, might just be her exceptional family's "...
+      'popularity' =&gt;
+      double(7556.601)
+      'poster_path' =&gt;
+      string(32) "/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg"
+      'release_date' =&gt;
+      string(10) "2021-11-24"
+      'title' =&gt;
+      string(7) "Encanto"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(7.8)
+      'vote_count' =&gt;
+      int(2349)
+    }
+    [2] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/o76ZDm8PS9791XiuieNB93UZcRV.jpg"
+      'genre_ids' =&gt;
+      array(3) {
+        ...
+      }
+      'id' =&gt;
+      int(460458)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(38) "Resident Evil: Welcome to Raccoon City"
+      'overview' =&gt;
+      string(393) "Once the booming home of pharmaceutical giant Umbrella Corporation, Raccoon City is now a dying Midwestern town. The company’s exodus left the city a wasteland…with great evil brewing below the surface. When that evil is unleashed, the townspeople are forever…changed…and a small group of survivors must work together to uncover the truth behind Umbrella and make it through the night."
+      'popularity' =&gt;
+      double(7125.776)
+      'poster_path' =&gt;
+      string(32) "/7uRbWOXxpWDMtnsd2PF3clu65jc.jpg"
+      'release_date' =&gt;
+      string(10) "2021-11-24"
+      'title' =&gt;
+      string(38) "Resident Evil: Welcome to Raccoon City"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      int(6)
+      'vote_count' =&gt;
+      int(760)
+    }
+    [3] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/hjAI67s5P3QO8Tl04nLV0rpqbID.jpg"
+      'genre_ids' =&gt;
+      array(3) {
+        ...
+      }
+      'id' =&gt;
+      int(624860)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(24) "The Matrix Resurrections"
+      'overview' =&gt;
+      string(110) "Plagued by strange memories, Neo's life takes an unexpected turn when he finds himself back inside the Matrix."
+      'popularity' =&gt;
+      double(6171.322)
+      'poster_path' =&gt;
+      string(32) "/gZlZLxJMfnSeS60abFZMh1IvODQ.jpg"
+      'release_date' =&gt;
+      string(10) "2021-12-16"
+      'title' =&gt;
+      string(24) "The Matrix Resurrections"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      int(7)
+      'vote_count' =&gt;
+      int(1931)
+    }
+    [4] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/vIgyYkXkg6NC2whRbYjBD7eb3Er.jpg"
+      'genre_ids' =&gt;
+      array(3) {
+        ...
+      }
+      'id' =&gt;
+      int(580489)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(27) "Venom: Let There Be Carnage"
+      'overview' =&gt;
+      string(161) "After finding a host body in investigative reporter Eddie Brock, the alien symbiote must face a new enemy, Carnage, the alter ego of serial killer Cletus Kasady."
+      'popularity' =&gt;
+      double(4530.241)
+      'poster_path' =&gt;
+      string(32) "/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg"
+      'release_date' =&gt;
+      string(10) "2021-09-30"
+      'title' =&gt;
+      string(27) "Venom: Let There Be Carnage"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(7.2)
+      'vote_count' =&gt;
+      int(5662)
+    }
+    [5] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/tutaKitJJIaqZPyMz7rxrhb4Yxm.jpg"
+      'genre_ids' =&gt;
+      array(4) {
+        ...
+      }
+      'id' =&gt;
+      int(438695)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(6) "Sing 2"
+      'overview' =&gt;
+      string(475) "Buster and his new cast now have their sights set on debuting a new show at the Crystal Tower Theater in glamorous Redshore City. But with no connections, he and his singers must sneak into the Crystal Entertainment offices, run by the ruthless wolf mogul Jimmy Crystal, where the gang pitches the ridiculous idea of casting the lion rock legend Clay Calloway in their show. Buster must embark on a quest to find the now-isolated Clay and persuade him to return to the stage."
+      'popularity' =&gt;
+      double(4449.966)
+      'poster_path' =&gt;
+      string(32) "/aWeKITRFbbwY8txG5uCj4rMCfSP.jpg"
+      'release_date' =&gt;
+      string(10) "2021-12-01"
+      'title' =&gt;
+      string(6) "Sing 2"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(7.5)
+      'vote_count' =&gt;
+      int(197)
+    }
+    [6] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/v6yvAEIuHtjzXY7Xfo15MKZWQB6.jpg"
+      'genre_ids' =&gt;
+      array(3) {
+        ...
+      }
+      'id' =&gt;
+      int(425909)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(23) "Ghostbusters: Afterlife"
+      'overview' =&gt;
+      string(180) "When a single mom and her two kids arrive in a small town, they begin to discover their connection to the original Ghostbusters and the secret legacy their grandfather left behind."
+      'popularity' =&gt;
+      double(3663.013)
+      'poster_path' =&gt;
+      string(32) "/sg4xJaufDiQl7caFEskBtQXfD4x.jpg"
+      'release_date' =&gt;
+      string(10) "2021-11-11"
+      'title' =&gt;
+      string(23) "Ghostbusters: Afterlife"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(7.2)
+      'vote_count' =&gt;
+      int(676)
+    }
+    [7] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/dK12GIdhGP6NPGFssK2Fh265jyr.jpg"
+      'genre_ids' =&gt;
+      array(4) {
+        ...
+      }
+      'id' =&gt;
+      int(512195)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(10) "Red Notice"
+      'overview' =&gt;
+      string(217) "An Interpol-issued Red Notice is a global alert to hunt and capture the world's most wanted. But when a daring heist brings together the FBI's top profiler and two rival criminals, there's no telling what will happen."
+      'popularity' =&gt;
+      double(3537.801)
+      'poster_path' =&gt;
+      string(32) "/lAXONuqg41NwUMuzMiFvicDET9Y.jpg"
+      'release_date' =&gt;
+      string(10) "2021-11-04"
+      'title' =&gt;
+      string(10) "Red Notice"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(6.8)
+      'vote_count' =&gt;
+      int(2559)
+    }
+    [8] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/srDyClcl2J0L3ZP9tpahwoTcNxj.jpg"
+      'genre_ids' =&gt;
+      array(3) {
+        ...
+      }
+      'id' =&gt;
+      int(787310)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(16) "Survive the Game"
+      'overview' =&gt;
+      string(370) "When cop David is injured in a drug bust gone wrong, his partner Cal chases the two criminals who shot him. They all land at a remote farm owned by troubled vet Eric, and as Cal and Eric plot their defense, more of the gang arrives - along with a wounded David. Outnumbered, the three heroes must use stealth, smarts, and good shooting to take down the drug-dealing mob."
+      'popularity' =&gt;
+      double(2656.747)
+      'poster_path' =&gt;
+      string(32) "/xF1uc2pEf34X2G41wvZaF5H0V7C.jpg"
+      'release_date' =&gt;
+      string(10) "2021-10-08"
+      'title' =&gt;
+      string(16) "Survive the Game"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(5.8)
+      'vote_count' =&gt;
+      int(62)
+    }
+    [9] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/cinER0ESG0eJ49kXlExM0MEWGxW.jpg"
+      'genre_ids' =&gt;
+      array(3) {
+        ...
+      }
+      'id' =&gt;
+      int(566525)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(41) "Shang-Chi and the Legend of the Ten Rings"
+      'overview' =&gt;
+      string(130) "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization."
+      'popularity' =&gt;
+      double(2514.819)
+      'poster_path' =&gt;
+      string(32) "/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg"
+      'release_date' =&gt;
+      string(10) "2021-09-01"
+      'title' =&gt;
+      string(41) "Shang-Chi and the Legend of the Ten Rings"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(7.8)
+      'vote_count' =&gt;
+      int(4986)
+    }
+    [10] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/1BqX34aJS5J8PefVnQSfQIEPfkl.jpg"
+      'genre_ids' =&gt;
+      array(3) {
+        ...
+      }
+      'id' =&gt;
+      int(826749)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(8) "Fortress"
+      'overview' =&gt;
+      string(230) "The story revolves around a top-secret resort for retired U.S. intelligence officers. A group of criminals led by Balzary breach the compound, hellbent on revenge on Robert, forcing the retired officer and his son to save the day."
+      'popularity' =&gt;
+      double(2015.96)
+      'poster_path' =&gt;
+      string(32) "/m76LAg0MchIcIW9i4yXsQPGQJJF.jpg"
+      'release_date' =&gt;
+      string(10) "2021-12-17"
+      'title' =&gt;
+      string(8) "Fortress"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(6.3)
+      'vote_count' =&gt;
+      int(90)
+    }
+    [11] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/8rft8A9nH43IReybFtYt21ezfMK.jpg"
+      'genre_ids' =&gt;
+      array(1) {
+        ...
+      }
+      'id' =&gt;
+      int(899082)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(49) "Harry Potter 20th Anniversary: Return to Hogwarts"
+      'overview' =&gt;
+      string(203) "An enchanting making-of story told through all-new in-depth interviews and cast conversations, inviting fans on a magical first-person journey through one of the most beloved film franchises of all time."
+      'popularity' =&gt;
+      double(2004.382)
+      'poster_path' =&gt;
+      string(32) "/34Xss3gwKdwvtomCDkeC2lW4PVB.jpg"
+      'release_date' =&gt;
+      string(10) "2022-01-01"
+      'title' =&gt;
+      string(49) "Harry Potter 20th Anniversary: Return to Hogwarts"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(8.5)
+      'vote_count' =&gt;
+      int(616)
+    }
+    [12] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/lyvszvJJqqI8aqBJ70XzdCNoK0y.jpg"
+      'genre_ids' =&gt;
+      array(4) {
+        ...
+      }
+      'id' =&gt;
+      int(524434)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(8) "Eternals"
+      'overview' =&gt;
+      string(245) "The Eternals are a team of ancient aliens who have been living on Earth in secret for thousands of years. When an unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind’s most ancient enemy, the Deviants."
+      'popularity' =&gt;
+      double(1819.416)
+      'poster_path' =&gt;
+      string(32) "/6AdXwFTRTAzggD2QUTt5B7JFGKL.jpg"
+      'release_date' =&gt;
+      string(10) "2021-11-03"
+      'title' =&gt;
+      string(8) "Eternals"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(7.1)
+      'vote_count' =&gt;
+      int(1608)
+    }
+    [13] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/weneJTnAb1IFI94SKcaXzBFmPKH.jpg"
+      'genre_ids' =&gt;
+      array(4) {
+        ...
+      }
+      'id' =&gt;
+      int(818192)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(7) "Ida Red"
+      'overview' =&gt;
+      string(152) "Ida Red may not survive her 20-year prison sentence for armed robbery. She turns to her son, Wyatt, for one last job and a chance to regain her freedom."
+      'popularity' =&gt;
+      double(1763.136)
+      'poster_path' =&gt;
+      string(32) "/etMxKseW67499tUJonLNHXTF538.jpg"
+      'release_date' =&gt;
+      string(10) "2021-11-05"
+      'title' =&gt;
+      string(7) "Ida Red"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(5.6)
+      'vote_count' =&gt;
+      int(17)
+    }
+    [14] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/1Wlwnhn5sXUIwlxpJgWszT622PS.jpg"
+      'genre_ids' =&gt;
+      array(3) {
+        ...
+      }
+      'id' =&gt;
+      int(585245)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(24) "Clifford the Big Red Dog"
+      'overview' =&gt;
+      string(517) "As Emily struggles to fit in at home and at school, she discovers a small red puppy who is destined to become her best friend. When Clifford magically undergoes one heck of a growth spurt, becomes a gigantic dog and attracts the attention of a genetics company, Emily and her Uncle Casey have to fight the forces of greed as they go on the run across New York City. Along the way, Clifford affects the lives of everyone around him and teaches Emily and her uncle the true meaning of acceptance and unconditional "...
+      'popularity' =&gt;
+      double(1706.97)
+      'poster_path' =&gt;
+      string(32) "/oifhfVhUcuDjE61V5bS5dfShQrm.jpg"
+      'release_date' =&gt;
+      string(10) "2021-11-10"
+      'title' =&gt;
+      string(24) "Clifford the Big Red Dog"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(7.4)
+      'vote_count' =&gt;
+      int(840)
+    }
+    [15] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/gg2w8QYf6o5elN95RHtikQaVIsc.jpg"
+      'genre_ids' =&gt;
+      array(3) {
+        ...
+      }
+      'id' =&gt;
+      int(592508)
+      'original_language' =&gt;
+      string(2) "hi"
+      'original_title' =&gt;
+      string(12) "Sooryavanshi"
+      'overview' =&gt;
+      string(208) "A fearless, faithful albeit slightly forgetful Mumbai cop, Veer Sooryavanshi, the chief of the Anti-Terrorism Squad in India pulls out all the stops and stunts to thwart a major conspiracy to attack his city."
+      'popularity' =&gt;
+      double(1484.915)
+      'poster_path' =&gt;
+      string(32) "/1vuix8r1CJ2M6IldR27Z95hWm7e.jpg"
+      'release_date' =&gt;
+      string(10) "2021-11-05"
+      'title' =&gt;
+      string(12) "Sooryavanshi"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(5.6)
+      'vote_count' =&gt;
+      int(58)
+    }
+    [16] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/sLWUtbrpiLp23a0XDSiUiltdFPJ.jpg"
+      'genre_ids' =&gt;
+      array(3) {
+        ...
+      }
+      'id' =&gt;
+      int(1930)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(22) "The Amazing Spider-Man"
+      'overview' =&gt;
+      string(640) "Peter Parker is an outcast high schooler abandoned by his parents as a boy, leaving him to be raised by his Uncle Ben and Aunt May. Like most teenagers, Peter is trying to figure out who he is and how he got to be the person he is today. As Peter discovers a mysterious briefcase that belonged to his father, he begins a quest to understand his parents' disappearance – leading him directly to Oscorp and the lab of Dr. Curt Connors, his father's former partner. As Spider-Man is set on a collision course with"...
+      'popularity' =&gt;
+      double(1466.689)
+      'poster_path' =&gt;
+      string(32) "/fSbqPbqXa7ePo8bcnZYN9AHv6zA.jpg"
+      'release_date' =&gt;
+      string(10) "2012-06-23"
+      'title' =&gt;
+      string(22) "The Amazing Spider-Man"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(6.6)
+      'vote_count' =&gt;
+      int(14207)
+    }
+    [17] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/nvxrQQspxmSblCYDtvDAbVFX8Jt.jpg"
+      'genre_ids' =&gt;
+      array(3) {
+        ...
+      }
+      'id' =&gt;
+      int(646380)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(13) "Don't Look Up"
+      'overview' =&gt;
+      string(129) "Two low-level astronomers must go on a giant media tour to warn humankind of an approaching comet that will destroy planet Earth."
+      'popularity' =&gt;
+      double(1443.47)
+      'poster_path' =&gt;
+      string(32) "/th4E1yqsE8DGpAseLiUrI60Hf8V.jpg"
+      'release_date' =&gt;
+      string(10) "2021-12-07"
+      'title' =&gt;
+      string(13) "Don't Look Up"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(7.3)
+      'vote_count' =&gt;
+      int(3249)
+    }
+    [18] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/xGrTm3J0FTafmuQ85vF7ZCw94x6.jpg"
+      'genre_ids' =&gt;
+      array(3) {
+        ...
+      }
+      'id' =&gt;
+      int(589761)
+      'original_language' =&gt;
+      string(2) "ru"
+      'original_title' =&gt;
+      string(18) "Чернобыль"
+      'overview' =&gt;
+      string(335) "The aftermath of a shocking explosion at the Chernobyl nuclear power station made hundreds of people sacrifice their lives to clean up the site of the catastrophe and to successfully prevent an even bigger disaster that could have turned a large part of the European continent into an uninhabitable exclusion zone. This is their story."
+      'popularity' =&gt;
+      double(1442.915)
+      'poster_path' =&gt;
+      string(32) "/AmJLuHjxPdIJO6vmymeWADG6jK5.jpg"
+      'release_date' =&gt;
+      string(10) "2021-04-15"
+      'title' =&gt;
+      string(16) "Chernobyl: Abyss"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(6.2)
+      'vote_count' =&gt;
+      int(258)
+    }
+    [19] =&gt;
+    array(14) {
+      'adult' =&gt;
+      bool(false)
+      'backdrop_path' =&gt;
+      string(32) "/mFbS5TwN95BcSEfiztdchLgTQ0v.jpg"
+      'genre_ids' =&gt;
+      array(2) {
+        ...
+      }
+      'id' =&gt;
+      int(617653)
+      'original_language' =&gt;
+      string(2) "en"
+      'original_title' =&gt;
+      string(13) "The Last Duel"
+      'overview' =&gt;
+      string(137) "King Charles VI declares that Knight Jean de Carrouges settle his dispute with his squire, Jacques Le Gris, by challenging him to a duel."
+      'popularity' =&gt;
+      double(1424.501)
+      'poster_path' =&gt;
+      string(32) "/zjrJE0fpzPvX8saJXj8VNfcjBoU.jpg"
+      'release_date' =&gt;
+      string(10) "2021-10-13"
+      'title' =&gt;
+      string(13) "The Last Duel"
+      'video' =&gt;
+      bool(false)
+      'vote_average' =&gt;
+      double(7.6)
+      'vote_count' =&gt;
+      int(1355)
+    }
+  }
+  'total_pages' =&gt;
+  int(31874)
+  'total_results' =&gt;
+  int(637473)
+  'movie_filter' =&gt;
+  string(7) "popular"
+  'minPage' =&gt;
+  int(1)
+  'maxPage' =&gt;
+  int(4)
+}
+</system-out>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
