@@ -18,22 +18,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <!-- common style files -->
-    <link rel="stylesheet" href="/public/assets/styles/css/common.style.css">
-    <link rel="stylesheet" href="/public/assets/styles/css/nav-bar.style.css">
-    <link rel="stylesheet" href="/public/assets/styles/css/footer.style.css">
-
-    <?php
-    $_COOKIE['language'] = "us";
-
-    $languages = [
-        "En" => "us",
-        "It" => "it",
-        "Fr" => "fr",
-        "Es" => "es",
-        "De" => "de"
-    ];
-    include_once __DIR__ . "/../views/languages/" . $_COOKIE['language'] . ".lang.php";
-    ?>
+    <link rel="stylesheet" href="/assets/styles/css/common.style.css">
+    <link rel="stylesheet" href="/assets/styles/css/nav-bar.style.css">
+    <link rel="stylesheet" href="/assets/styles/css/footer.style.css">
     <link rel="stylesheet" href="/assets/styles/css/home.style.css">
 
     <!-- movie grid animation script -->
@@ -46,7 +33,7 @@
             <a href="/">
                 <img src="/assets/icons/logo.icon.png">
             </a>
-            <input class="search-bar" type="text" placeholder="<?= $lang['search_bar'] ?>">
+            <input class="search-bar" type="text" placeholder="<?= "Search bar" ?>">
             <span>
                 <?php
                 if (isset($_SESSION['username'])) {
@@ -55,19 +42,6 @@
                     echo "<a href='/login'>Login</a>";
                 }
                 ?>
-                <select class="languages">
-                    <?php
-                    foreach ($languages as $key => $value) {
-                        if ($value == $_COOKIE['language']) {
-                            $selected = "selected";
-                        } else {
-                            $selected = "";
-                        }
-
-                        echo "<option value='$value' $selected>" . $key . "</option>";
-                    }
-                    ?>
-                </select>
             </span>
         </div>
     </div>
