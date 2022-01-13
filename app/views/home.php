@@ -4,17 +4,18 @@
     <?php
     if (isset($movie_filter)) {
         echo "<span class='filter-box'>";
-        echo "<a href='/popular'>" . $lang['movie_filter']['popular'] . "</a>";
-        echo "<a href='/now_playing'>" . $lang['movie_filter']['now_playing'] . "</a>";
-        echo "<a href='/top_rated'>" . $lang['movie_filter']['top_rated'] . "</a>";
-        echo "<a href='/upcoming'>" . $lang['movie_filter']['upcoming'] . "</a>";
+        echo "<a href='/popular'>" . "Popular" . "</a>";
+        echo "<a href='/now_playing'>" . "Now playing" . "</a>";
+        echo "<a href='/top_rated'>" . "Top rated" . "</a>";
+        echo "<a href='/upcoming'>" . "Upcoming" . "</a>";
         echo "</span>";
     } else {
         if ($total_results == 1) {
-            echo "<h2 class='total-results'>" . $lang['total_results']['there_is'] . $total_results . $lang['total_results']["result_for"] . "\"" . $query . "\"</h2>";
+            $correctWord = "There is ";
         } else {
-            echo "<h2 class='total-results'>" . $lang['total_results']['there_are'] . $total_results . $lang['total_results']["results_for"] . "\"" . $query . "\"</h2>";
+            $correctWord = "There are ";
         }
+        echo "<h2 class='total-results'>" . $correctWord . $total_results . "total results for " . "\"" . $query . "\"</h2>";
     }
     ?>
 
