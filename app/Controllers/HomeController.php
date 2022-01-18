@@ -1,6 +1,9 @@
 <?php
 
+namespace App\Controllers;
+
 use App\Controllers\BaseController;
+use App\Models\MovieModel;
 
 class HomeController extends BaseController {
 
@@ -12,10 +15,10 @@ class HomeController extends BaseController {
      */
     public function index($filter, $page) {
         // fetches data from the home model
-        $homeModel = $this->model("movie");
+        $homeModel = new MovieModel();
         $data = $homeModel->getMovieList($filter, $page);
 
-        $this->view("home", $data);
+        echo view("home", $data);
     }
 
     /**
@@ -26,9 +29,9 @@ class HomeController extends BaseController {
      */
     public function searchMovie($query, $page) {
         // fetches data from the home model
-        $homeModel = $this->model("movie");
+        $homeModel = new MovieModel();
         $data = $homeModel->searchMovie($query, $page);
 
-        $this->view("home", $data);
+        echo view("home", $data);
     }
 }
