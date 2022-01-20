@@ -31,7 +31,49 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+// $routes->group("/", function ($routes) {
+//     $routes->get(
+//         '',
+//         'HomeController::index/popular/1',
+//     );
+
+
+// });
+
+$routes->get(
+    '/',
+    'HomeController::index/popular/1',
+);
+
+$routes->get(
+    '/popular/(:alphanum)',
+    'HomeController::index/popular/$1',
+);
+
+$routes->get(
+    '/now_playing/(:alphanum)',
+    'HomeController::index/now_playing/$1',
+);
+
+$routes->get(
+    '/top_rated/(:alphanum)',
+    'HomeController::index/top_rated/$1',
+);
+
+$routes->get(
+    '/upcoming/(:alphanum)',
+    'HomeController::index/upcoming/$1',
+);
+
+$routes->get(
+    "/search/(:alpha)/",
+    "HomeController::searchMovie/$1/1"
+);
+
+$routes->addRedirect("/popular", "/popular/1");
+$routes->addRedirect("/now_playing", "/now_playing/1");
+$routes->addRedirect("/top_rated", "/top_rated/1");
+$routes->addRedirect("/upcoming", "/upcoming/1");
 
 /*
  * --------------------------------------------------------------------
