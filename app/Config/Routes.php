@@ -66,7 +66,7 @@ $routes->get(
 );
 
 $routes->get(
-    "/search/(:alpha)/",
+    "/search/(:segment)/",
     "HomeController::searchMovie/$1/1"
 );
 
