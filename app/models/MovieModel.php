@@ -37,12 +37,10 @@ class MovieModel extends Model {
      */
     public function getMovieList($filter, $page) {
         // get the json file into a string variable
-        $tmdbUrl = "https://api.themoviedb.org/3/movie/"
-            . $filter
-            . "?api_key="
-            . "7e7244838cd02553e7353bc63ef2f3ad"
-            . "&page="
-            . $page;
+        $tmdbUrl = "https://api.themoviedb.org/3/movie/";
+        $tmdbUrl .= $filter;
+        $tmdbUrl .= "?api_key={$_ENV['tmdb_api']}";
+        $tmdbUrl .= "&page=$page";
 
         $json = @file_get_contents($tmdbUrl);
 
@@ -61,22 +59,16 @@ class MovieModel extends Model {
     /**
      * searches for movies
      *
-     * @param string $filter, the filter to select movies
+     * @param string $query
      * @param string $page
      *
-     * @return array, containing all the data
+     * @return array
      */
     public function searchMovie($query, $page) {
-        $tmdbUrl = "https://api.themoviedb.org/3/search/movie?api_key="
-            . $_ENV['apiKey']
-            . "&language="
-            . $_COOKIE['language']
-            . "&query="
-            . $query
-            . "&page="
-            . $page
-            . "&region="
-            . $_COOKIE['language'];
+        $tmdbUrl = "https://api.themoviedb.org/3/search/movie?api_key=";
+        $tmdbUrl .= $_ENV['tmdb_api'];
+        $tmdbUrl .= "&query=$query";
+        $tmdbUrl .= "&page=$page";
 
         $json = @file_get_contents($tmdbUrl);
 
@@ -102,13 +94,8 @@ class MovieModel extends Model {
      * @return array, containing all the data
      */
     public function getMovieDetails($id) {
-        // get the json file into a string variable
-        $tmdbUrl = "https://api.themoviedb.org/3/movie/"
-            . $id
-            . "?api_key="
-            . $_ENV['apiKey']
-            . "&language="
-            . $_COOKIE['language'];
+        $tmdbUrl = "https://api.themoviedb.org/3/movie/$id";
+        $tmdbUrl .= "?api_key={$_ENV['tmdb_api']}";
 
         $json = @file_get_contents($tmdbUrl);
 
@@ -142,12 +129,9 @@ class MovieModel extends Model {
         if (count($watchlist)) {
             foreach ($watchlist as $index => $movie) {
                 // get the json file into a string variable
-                $tmdbUrl = "https://api.themoviedb.org/3/movie/"
-                    . $movie['movie']
-                    . "?api_key="
-                    . $_ENV['apiKey']
-                    . "&language="
-                    . $_COOKIE['language'];
+                $tmdbUrl = "https://api.themoviedb.org/3/movie/";
+                $tmdbUrl .= $movie['movie'];
+                $tmdbUrl .= "?api_key={$_ENV['apiKey']}";
 
                 $json = @file_get_contents($tmdbUrl);
 
@@ -291,11 +275,8 @@ class MovieModel extends Model {
      * @return array, containing all the cast and crew data
      */
     private function getCredits($id) {
-        // get the json file into a string variable
-        $tmdbUrl = "https://api.themoviedb.org/3/movie/"
-            . $id
-            . "/credits?api_key="
-            . $_ENV['apiKey'];
+        $tmdbUrl = "https://api.themoviedb.org/3/movie/$id";
+        $tmdbUrl .= "/credits?api_key={$_ENV['tmdb_api']}";
 
         $json = @file_get_contents($tmdbUrl);
 
