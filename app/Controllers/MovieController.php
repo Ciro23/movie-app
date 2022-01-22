@@ -1,6 +1,9 @@
 <?php
 
+namespace App\Controllers;
+
 use App\Controllers\BaseController;
+use App\Models\MovieModel;
 
 class MovieController extends BaseController {
 
@@ -10,11 +13,10 @@ class MovieController extends BaseController {
      * @param int $id, the movie id
      */
     public function index($id) {
-        // fetches data from the movie model
-        $movieModel = $this->model("movie");
+        $movieModel = new MovieModel();
         $data = $movieModel->getMovieDetails($id);
 
-        $this->view("movie", $data);
+        echo view("movie", $data);
     }
 
     /**
@@ -24,7 +26,7 @@ class MovieController extends BaseController {
      */
     public function addToWatchlist($id) {
         if (isset($_SESSION['username'])) {
-            $movieModel = $this->model("movie");
+            $movieModel = new MovieModel();
             $movieModel->addToWatchlist($id);
 
             header("Location: /movie/" . $id);
@@ -40,7 +42,7 @@ class MovieController extends BaseController {
      */
     public function removeFromWatchlist($id) {
         if (isset($_SESSION['username'])) {
-            $movieModel = $this->model("movie");
+            $movieModel = new MovieModel();
             $movieModel->removeFromWatchlist($id);
 
             header("Location: /movie/" . $id);
