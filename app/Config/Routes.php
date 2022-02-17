@@ -70,6 +70,18 @@ $routes->get(
     'MovieController::index/$1',
 );
 
+$routes->group("/search/(:segment)", function ($routes) {
+    $routes->get(
+        "",
+        "HomeController::searchMovie/$1/1"
+    );
+
+    $routes->get(
+        "(:alphanum)",
+        "HomeController::searchMovie/$1/$2"
+    );
+});
+
 $routes->addRedirect("/popular", "/popular/1");
 $routes->addRedirect("/now_playing", "/now_playing/1");
 $routes->addRedirect("/top_rated", "/top_rated/1");
