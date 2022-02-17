@@ -66,8 +66,8 @@ $routes->get(
 );
 
 $routes->get(
-    "/search/(:segment)/",
-    "HomeController::searchMovie/$1/1"
+    '/movie/(:alphanum)',
+    'MovieController::index/$1',
 );
 
 $routes->addRedirect("/popular", "/popular/1");
