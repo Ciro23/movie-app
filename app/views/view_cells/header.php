@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="/assets/styles/css/common.style.css">
     <link rel="stylesheet" href="/assets/styles/css/nav-bar.style.css">
     <link rel="stylesheet" href="/assets/styles/css/footer.style.css">
-    <link rel="stylesheet" href="/assets/styles/css/home.style.css">
 
     <!-- movie grid animation script -->
     <script src="/assets/js-scripts/movie-grid.script.js"></script>

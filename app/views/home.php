@@ -1,5 +1,9 @@
 <?= view_cell("\App\Libraries\ViewCells::header") ?>
 
+<head>
+    <link rel="stylesheet" href="/assets/styles/css/home.style.css">
+</head>
+
 <div class="movies-container">
     <?php
     if (isset($movie_filter)) {
@@ -15,7 +19,7 @@
         } else {
             $correctWord = "There are ";
         }
-        echo "<h2 class='total-results'>" . $correctWord . $total_results . "total results for " . "\"" . $query . "\"</h2>";
+        echo "<h2 class='total-results'>" . $correctWord . $total_results . " total results for " . "\"" . $query . "\"</h2>";
     }
     ?>
 
