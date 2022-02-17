@@ -18,7 +18,7 @@ for ($i = 0; $i < $castLimit; $i++) {
     echo "<div class='cast-card'>";
 
     // checks if the actor image exists
-    $imgPath = MovieModel::doesMovieImageExists($cast[$i]['profile_path'], "w185");
+    $imgPath = App\Models\MovieModel::doesMovieImageExists($cast[$i]['profile_path'], "w185");
     
     echo "<img src='$imgPath'>";
     echo "<p class='name'>" . $cast[$i]['name'] . "</p>";
