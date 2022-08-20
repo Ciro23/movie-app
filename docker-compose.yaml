@@ -1,0 +1,28 @@
+services:
+        mysql:
+                container_name: mysql
+                build: ./
+                ports:
+                        - 3306:3306
+                image: mysql:latest
+                volumes: 
+                        - ./app/config/database.sql:/docker-entrypoint-initdb.d
+                env_file:
+                        - ./app/config/.env
+                environment:
+                        - MYSQL_DATABASE=${dbName}
+                        - MYSQL_HOST=${dbServerName}
+                        - MYSQL_USER=${dbUsername}
+                        - MYSQL_PASSWORD=${dbPassword}
+        php:
+                container_name: php
+                build: ./
+                ports:
+                        - 80:80
+                image: movie-app
+                volumes:
+                        - ./:/var/www/html/
+                env_file:
+                        - ./app/config/.env
+                links:
+                        - mysql
