@@ -5,7 +5,7 @@ services:
             - 3306:3306
         image: mariadb:10.8
         volumes: 
-            - ./app/config/database.sql:/var/lib/mysql
+            - ./app/config/:/var/lib/mysql
         env_file:
             - ./app/config/.env
         environment:
