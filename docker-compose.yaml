@@ -12,7 +12,7 @@ services:
             - MYSQL_DATABASE=${dbName}
             - MYSQL_HOST=${dbServerName}
             - MYSQL_USER=${dbUsername}
-            - MYSQL_PASSWORD=${dbPassword}
+            - MYSQL_ROOT_PASSWORD=${dbPassword}
 
     php:
         container_name: movie-app_php
