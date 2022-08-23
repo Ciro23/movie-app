@@ -4,14 +4,10 @@ services:
         ports:
             - 3306:3306
         image: mariadb:10.8
+        restart: always
         volumes: 
-            - ./app/config/:/var/lib/mysql
-        env_file:
-            - ./app/config/.env
+            - mariadb-data:/var/lib/mysql
         environment:
-            - MYSQL_DATABASE=${dbName}
-            - MYSQL_HOST=${dbServerName}
-            - MYSQL_USER=${dbUsername}
             - MYSQL_ROOT_PASSWORD=${dbPassword}
 
     php:
@@ -25,3 +21,16 @@ services:
             - ./app/config/.env
         links:
             - mariadb
+
+    phpmyadmin:
+        container_name: movie-app_phpmyadmin
+        image: phpmyadmin/phpmyadmin:latest
+        ports:
+            - 8000:80
+        environment:
+            - PMA_HOST=mariadb
+        depends_on:
+            - mariadb
+
+volumes:
+     mariadb-data:
